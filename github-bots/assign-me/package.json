@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "start": "probot run ./lib/index.js"
+    "dev": "probot run ./lib/index.js"
   },
   "dependencies": {
     "probot": "^12.2.4"
