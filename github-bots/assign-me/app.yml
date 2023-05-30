@@ -24,28 +24,28 @@ default_events:
   # - gollum
   # - issue_comment
   - issues
-# - label
-# - milestone
-# - member
-# - membership
-# - org_block
-# - organization
-# - page_build
-# - project
-# - project_card
-# - project_column
-# - public
-# - pull_request
-# - pull_request_review
-# - pull_request_review_comment
-# - push
-# - release
-# - repository
-# - repository_import
-# - status
-# - team
-# - team_add
-# - watch
+  # - label
+  # - milestone
+  # - member
+  # - membership
+  # - org_block
+  # - organization
+  # - page_build
+  # - project
+  # - project_card
+  # - project_column
+  # - public
+  # - pull_request
+  # - pull_request_review
+  # - pull_request_review_comment
+  # - push
+  # - release
+  # - repository
+  # - repository_import
+  # - status
+  # - team
+  # - team_add
+  # - watch
 
 # The set of permissions needed by the GitHub App. The format of the object uses
 # the permission name for the key (for example, issues) and the access type for
