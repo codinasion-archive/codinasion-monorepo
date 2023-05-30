@@ -1,32 +1,25 @@
 {
   "name": "codinasion-bot",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
-  "description": "A Probot app",
-  "author": "Harsh Raj",
-  "license": "ISC",
-  "homepage": "https://github.com//",
+  "description": "A friendly codinasion bot.",
+  "author": "harshraj8843",
+  "license": "MIT",
+  "homepage": "https://github.com/codinasion/codinasion",
   "keywords": [
-    "probot",
-    "github",
-    "probot-app"
+    "codinasion-bot"
   ],
   "scripts": {
-    "start": "probot run ./index.js",
-    "test": "jest"
+    "dev": "probot run ./app.js",
+    "simulate": "sh simulate.sh"
   },
   "dependencies": {
+    "moment": "^2.29.4",
+    "node-fetch": "2.6.6",
     "probot": "^12.2.4"
   },
-  "devDependencies": {
-    "jest": "^29.0.0",
-    "nock": "^13.0.5",
-    "smee-client": "^1.2.2"
-  },
+
   "engines": {
     "node": ">= 10.13.0"
-  },
-  "jest": {
-    "testEnvironment": "node"
   }
 }
