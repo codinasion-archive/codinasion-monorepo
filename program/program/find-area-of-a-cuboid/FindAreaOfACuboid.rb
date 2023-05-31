@@ -1,4 +1,4 @@
-pi = Math::PI
+Math::PI
 
 print "Enter length : \n"
 length = gets.chomp.to_i

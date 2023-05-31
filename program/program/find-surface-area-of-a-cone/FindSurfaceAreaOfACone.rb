@@ -1,6 +1,6 @@
-radius=0.0;
-height=0.0;
-surfaceArea=0.0;
+0.0;
+0.0;
+0.0;
 
 print "Enter radius: ";
 radius = gets.chomp.to_f;  

@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 def isArmstrong( number )
-    result = false
+    false
     numberOfDigits = number.to_s.length
     sum = 0
     n = number
