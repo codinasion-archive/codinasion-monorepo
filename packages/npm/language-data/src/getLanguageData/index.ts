@@ -1,5 +1,5 @@
-import LanguageData from '../data';
-import type { LanguageDataType, GetLanguageDataInputType } from '../type';
+import LanguageData from "../data";
+import type { LanguageDataType, GetLanguageDataInputType } from "../type";
 
 export default function getLanguageData({
   name,
@@ -10,7 +10,7 @@ export default function getLanguageData({
     if (name) {
       return languageData.name.toLowerCase() === name.toLowerCase();
     } else if (fileExtension) {
-      if (fileExtension[0] === '.') {
+      if (fileExtension[0] === ".") {
         fileExtension = fileExtension.slice(1);
       }
       return languageData.fileExtension.includes(fileExtension);

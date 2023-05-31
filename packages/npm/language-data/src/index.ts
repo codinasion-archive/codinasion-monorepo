@@ -1,7 +1,7 @@
-import getLanguageData from './getLanguageData';
-import renameFile from './renameFile';
+import getLanguageData from "./getLanguageData";
+import renameFile from "./renameFile";
 
-import type { LanguageDataType } from './type';
+import type { LanguageDataType } from "./type";
 
 export { getLanguageData, renameFile };
 
