@@ -8,6 +8,20 @@ export async function GET() {
         path: "/",
         description: "Codinasion API home",
       },
+      //
+      // Github data routes
+      {
+        path: "/github/contributors",
+        description: "List of Codinasion contributors",
+      },
+      {
+        path: "/github/members",
+        description: "List of Codinasion members",
+      },
+      {
+        path: "/github/repos",
+        description: "List of Codinasion repositories",
+      },
     ],
   };
 
