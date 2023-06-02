@@ -21,9 +21,9 @@ namespace CSharpStringToASCII {
         // main method
         public static void Main(string[] args) {
             // prompting user for input
-            Console.WriteLine("Enter a string: ");
+            Console.Write("Enter a string: ");
             // read user input from input stream
-            string userInput = Console.Readline();
+            string userInput = Console.ReadLine();
             // calling method to print ASCII values of the input
             PrintAsciiValues(userInput);
         }
