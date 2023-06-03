@@ -4,7 +4,6 @@ import { Image, Link } from "@/shared";
 
 import { ProgramListType, ProgramDataType } from "@/types";
 
-
 import Logo from "assets/codinasion.png";
 
 type LanguageCardProps = {
