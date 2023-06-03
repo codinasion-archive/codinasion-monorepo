@@ -1,10 +1,15 @@
+const siteUrl = "https://program.codinasion.org";
+
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: "https://program.codinasion.org",
+  siteUrl: siteUrl,
   generateRobotsTxt: true,
-  exclude: [],
+  exclude: ["/**", "/sitemap-program.xml", "/sitemap-program-languages.xml"],
   robotsTxtOptions: {
-    additionalSitemaps: [],
+    additionalSitemaps: [
+      `${siteUrl}/sitemap-program.xml`,
+      `${siteUrl}/sitemap-program-languages.xml`,
+    ],
   },
 };
 
