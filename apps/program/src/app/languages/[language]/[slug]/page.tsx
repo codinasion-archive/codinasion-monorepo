@@ -26,18 +26,18 @@ export async function generateMetadata({
   const slug = params.slug;
   return {
     title: `${slug
-      .replace(/\-/g, " ")
+      .replace(/-/g, " ")
       .replace(/\w\S*/g, (w) =>
         w.replace(/^\w/, (c) => c.toUpperCase())
       )} | ${language
-      .replace(/\-sharp/g, "#")
-      .replace(/\-plus/g, "+")
+      .replace(/-sharp/g, "#")
+      .replace(/-plus/g, "+")
       .replace(/\w\S*/g, (w) =>
         w.replace(/^\w/, (c) => c.toUpperCase())
       )} | Program`,
     description: `Write a ${language
-      .replace(/\-sharp/g, "#")
-      .replace(/\-plus/g, "+")} program to ${slug.replace(/\-/g, " ")}.`,
+      .replace(/-sharp/g, "#")
+      .replace(/-plus/g, "+")} program to ${slug.replace(/-/g, " ")}.`,
   };
 }
 // End of metadata generation
@@ -88,8 +88,8 @@ export default async function ProgramDetailPage({
           },
           {
             title: language
-              .replace(/\-sharp/g, "#")
-              .replace(/\-plus/g, "+")
+              .replace(/-sharp/g, "#")
+              .replace(/-plus/g, "+")
               .replace(/\w\S*/g, (w) =>
                 w.replace(/^\w/, (c) => c.toUpperCase())
               ),
@@ -97,7 +97,7 @@ export default async function ProgramDetailPage({
           },
           {
             title: slug
-              .replace(/\-/g, " ")
+              .replace(/-/g, " ")
               .replace(/\w\S*/g, (w) =>
                 w.replace(/^\w/, (c) => c.toUpperCase())
               ),

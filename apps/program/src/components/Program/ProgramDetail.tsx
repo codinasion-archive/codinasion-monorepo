@@ -1,6 +1,6 @@
 import { getLanguageData } from "@codinasion/language-data";
 
-import { ProgramListType, ProgramDataType } from "@/types";
+import { ProgramDataType } from "@/types";
 
 import MarkdownPreview from "@/components/MarkdownPreview";
 
@@ -23,8 +23,8 @@ ${
     ? ProgramData.description.replace(
         "Write a program to ",
         `Write a ${language
-          .replace(/\-sharp/g, "#")
-          .replace(/\-plus/g, "+")
+          .replace(/-sharp/g, "#")
+          .replace(/-plus/g, "+")
           .replace(/\w\S*/g, (w) =>
             w.replace(/^\w/, (c) => c.toUpperCase())
           )} program to `

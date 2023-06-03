@@ -22,11 +22,11 @@ export async function generateMetadata({
   const slug = params.slug;
   return {
     title: `${slug
-      .replace(/\-/g, " ")
+      .replace(/-/g, " ")
       .replace(/\w\S*/g, (w) =>
         w.replace(/^\w/, (c) => c.toUpperCase())
       )} | Program`,
-    description: `Write a program to ${slug.replace(/\-/g, " ")}.`,
+    description: `Write a program to ${slug.replace(/-/g, " ")}.`,
   };
 }
 // End of metadata generation

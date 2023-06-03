@@ -21,8 +21,8 @@ export async function generateMetadata({
   const language = params.language;
   return {
     title: `${language
-      .replace(/\-sharp/g, "#")
-      .replace(/\-plus/g, "+")
+      .replace(/-sharp/g, "#")
+      .replace(/-plus/g, "+")
       .replace(/\w\S*/g, (w) =>
         w.replace(/^\w/, (c) => c.toUpperCase())
       )} | Language | Program`,
@@ -79,8 +79,8 @@ export default async function ProgramLanguagePage({
           },
           {
             title: language
-              .replace(/\-sharp/g, "#")
-              .replace(/\-plus/g, "+")
+              .replace(/-sharp/g, "#")
+              .replace(/-plus/g, "+")
               .replace(/\w\S*/g, (w) =>
                 w.replace(/^\w/, (c) => c.toUpperCase())
               ),

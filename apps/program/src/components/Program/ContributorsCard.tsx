@@ -1,6 +1,6 @@
 import { Image, Link } from "@/shared";
 
-import { ProgramListType, ProgramDataType } from "@/types";
+import { ProgramDataType } from "@/types";
 
 type ContributorsCardProps = {
   ProgramData: ProgramDataType;

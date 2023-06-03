@@ -28,11 +28,11 @@ export default function CodeBlock({
   const makeblock = () => {
     children.map(async (child: any) => {
       if (child.type === "pre") {
-        let className = child.props.children[0].props.className;
+        const className = child.props.children[0].props.className;
 
-        let language = className.split("-")[1];
+        const language = className.split("-")[1];
 
-        let tag = language;
+        const tag = language;
 
         setBlocks((prevBlocks: []) => [...prevBlocks, child]);
         setTabs((prevTabs: []) => [...prevTabs, tag]);
