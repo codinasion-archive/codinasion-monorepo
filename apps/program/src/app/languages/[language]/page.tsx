@@ -72,7 +72,6 @@ export default async function ProgramLanguagePage({
             title: "Home",
             url: "/",
           },
-          
           {
             title: "Languages",
             url: "/languages",

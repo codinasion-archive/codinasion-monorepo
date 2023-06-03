@@ -20,7 +20,6 @@ export default async function ProgramLanguageHomePage() {
             title: "Home",
             url: "/",
           },
-          
           {
             title: "Languages",
           },

@@ -1,4 +1,4 @@
-import {Breadcrumb} from "@/shared";
+import { Breadcrumb } from "@/shared";
 
 export default async function Loading() {
   return (

@@ -16,9 +16,7 @@ export default function ProgramCard({
     <>
       <Link
         key={ProgramData.slug}
-        href={`${language ? `/languages/${language}` : ``}/${
-          ProgramData.slug
-        }`}
+        href={`${language ? `/languages/${language}` : ``}/${ProgramData.slug}`}
         className="block p-3 mb-4 rounded-md shadow-lg hover:shadow-xl card_bg"
         externalIcon={false}
       >

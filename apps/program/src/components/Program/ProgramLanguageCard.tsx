@@ -1,6 +1,9 @@
+import { getLanguageData } from "@codinasion/language-data";
+
 import { Image, Link } from "@/shared";
 
 import { ProgramListType, ProgramDataType } from "@/types";
+
 
 import Logo from "assets/codinasion.png";
 
@@ -21,7 +24,13 @@ export default function ProgramLanguageCard({ languages }: LanguageCardProps) {
             <div key={language} className="m-1">
               <Link href={`/languages/${language}`}>
                 <Image
-                  src={Logo}
+                  src={
+                    getLanguageData({
+                      name: language
+                        .replace(/-sharp/g, "#")
+                        .replace(/-plus/g, "+"),
+                    })[0]?.logo || Logo
+                  }
                   alt={language}
                   className="w-16 md:w-20 rounded shadow-lg"
                   height={128}

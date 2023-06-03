@@ -1,3 +1,5 @@
+import { getLanguageData } from "@codinasion/language-data";
+
 import { ProgramListType, ProgramDataType } from "@/types";
 
 import MarkdownPreview from "@/components/MarkdownPreview";
@@ -32,14 +34,22 @@ ${
 
 ${
   language
-    ? `\`\`\`${language}
+    ? `\`\`\`${
+        getLanguageData({
+          name: language.replace(/-sharp/g, "#").replace(/-plus/g, "+"),
+        })[0]?.prismTag || "text"
+      }
 ${ProgramData[language as keyof ProgramDataType]}
 \`\`\``
     : `<codeblock slug="${ProgramData.slug}">
 
 ${ProgramData.languages
   .map((language: string) => {
-    return `\`\`\`${language}
+    return `\`\`\`${
+      getLanguageData({
+        name: language.replace(/-sharp/g, "#").replace(/-plus/g, "+"),
+      })[0]?.prismTag || "text"
+    }
 ${ProgramData[language as keyof ProgramDataType]}
 \`\`\``;
   })

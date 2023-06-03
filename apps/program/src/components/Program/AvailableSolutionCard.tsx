@@ -1,5 +1,7 @@
 import { AiOutlinePlus } from "react-icons/ai";
 
+import { getLanguageData } from "@codinasion/language-data";
+
 import { Image, Link } from "@/shared";
 
 import { ProgramListType, ProgramDataType } from "@/types";
@@ -25,7 +27,13 @@ export default function AvailableSolutionCard({
             <div key={language} className="m-1">
               <Link href={`/languages/${language}/${ProgramData.slug}`}>
                 <Image
-                  src={Logo}
+                  src={
+                    getLanguageData({
+                      name: language
+                        .replace(/-sharp/g, "#")
+                        .replace(/-plus/g, "+"),
+                    })[0]?.logo || Logo
+                  }
                   alt={language}
                   className="w-16 h-16 rounded shadow-lg"
                   height={128}
