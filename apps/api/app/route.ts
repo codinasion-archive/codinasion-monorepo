@@ -22,6 +22,24 @@ export async function GET() {
         path: "/github/repos",
         description: "List of Codinasion repositories",
       },
+      //
+      // Program data routes
+      {
+        path: "/program",
+        description: "List of programs",
+      },
+      {
+        path: "/program/[slug]",
+        description: "Specific program data",
+      },
+      {
+        path: "/program/languages",
+        description: "List of languages used in programs",
+      },
+      {
+        path: "/program/languages/[language]",
+        description: "Language specific list of programs",
+      },
     ],
   };
 
