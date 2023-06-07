@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+  .hover-up {
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105;
+  }
 }

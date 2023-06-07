@@ -10,6 +10,7 @@ import AppleTouchIcon from "assets/favicon/apple-touch-icon.png";
 import ShortcutIcon from "assets/favicon/favicon-16x16.png";
 import Logo from "assets/codinasion.png";
 import Manifest from "assets/favicon/manifest.json";
+import Layout from "@/layouts";
 
 export const metadata = {
   title: SiteMetadata.title,
@@ -47,7 +48,7 @@ export default function RootLayout({
       </Script>
 
       <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200">
-        {children}
+      <Layout>{children}</Layout>
       </body>
     </html>
   );
