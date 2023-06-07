@@ -3,8 +3,6 @@ import "shared/styles.css";
 
 import Script from "next/script";
 
-import Layout from "@/layouts";
-
 import { SiteMetadata } from "@/data";
 
 import Favicon from "assets/favicon/favicon.ico";
@@ -49,7 +47,7 @@ export default function RootLayout({
       </Script>
 
       <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200">
-        <Layout>{children}</Layout>
+        {children}
       </body>
     </html>
   );
