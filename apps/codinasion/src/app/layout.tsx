@@ -47,8 +47,10 @@ export default function RootLayout({
         `}
       </Script>
 
-      <body className="bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-200">
-        <Layout>{children}</Layout>
+      <body className="bg-primary-light dark:bg-primary-dark text-neutral-700 dark:text-neutral-300">
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
