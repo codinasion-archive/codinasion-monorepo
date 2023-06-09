@@ -4,10 +4,10 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors:{
+      colors: {
         "primary-light": "#EDFFE4",
         "primary-dark": "#081A00",
-      }
+      },
     },
   },
   plugins: [],

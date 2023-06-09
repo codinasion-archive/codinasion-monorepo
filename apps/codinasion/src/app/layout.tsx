@@ -48,9 +48,7 @@ export default function RootLayout({
       </Script>
 
       <body className="bg-primary-light dark:bg-primary-dark text-neutral-700 dark:text-neutral-300">
-        <Layout>
-          {children}
-        </Layout>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
