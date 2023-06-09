@@ -9,18 +9,18 @@ interface projectsDataFace {
 
 const projectsData: projectsDataFace[] = [
   {
-    title: "program",
+    title: "Program",
     desc: "An open-source codebase for sharing programming solutions. Good collection of `good first issue`",
     url: "https://program.codinasion.org/",
   },
   {
-    title: "bot",
-    desc: "An open-source codebase for sharing programming solutions. Good collection of `good first issue`",
+    title: "Bot",
+    desc: "A collection of github bots for automating tasks. Build using Probot.",
     url: "https://bots.codinasion.org/",
   },
   {
-    title: "packages",
-    desc: "An open-source codebase for sharing programming solutions. Good collection of `good first issue`",
+    title: "Packages",
+    desc: "A collection of npm packages written in typescript. These packages contains some useful typescript functions.",
     url: "https://packages.codinasion.org/",
   },
 ];

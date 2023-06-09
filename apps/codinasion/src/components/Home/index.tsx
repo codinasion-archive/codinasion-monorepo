@@ -1,10 +1,16 @@
 "use client";
-import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
+
 import { useEffect, useState } from "react";
+
+import { BsDiscord, BsGithub, BsTwitter } from "react-icons/bs";
+
 import { useTheme } from "next-themes";
+
 import { Image, Link } from "@/shared";
-import DarkModeToggle from "../DarkModeToggle";
+
 import SiteMetadata from "@/data/SiteMetadata";
+
+import DarkModeToggle from "../DarkModeToggle";
 import Loading from "@/app/loading";
 import Projects from "./projects";
 
@@ -83,7 +89,19 @@ export default function Home() {
           </section>
         </article>
       </section>
+
       <Projects />
+
+      <section className="p-3 mt-5 xl:container mx-auto w-full relative text-center md:text-end font-bold">
+        Designed by{" "}
+        <Link
+          href="https://github.com/0ME9A"
+          externalIcon={false}
+          className="text-lime-600 dark:text-lime-600 hover:text-lime-800 dark:hover:text-lime-500"
+        >
+          @0ME9A
+        </Link>
+      </section>
     </>
   );
 }
