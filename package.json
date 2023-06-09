@@ -22,8 +22,5 @@
     "turbo": "^1.9.9"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "codinasion",
-  "dependencies": {
-    "sharp": "^0.32.1"
-  }
+  "name": "codinasion"
 }
