@@ -8,6 +8,8 @@ import SiteMetadata from "@/data/SiteMetadata";
 import Loading from "@/app/loading";
 import Projects from "./projects";
 
+import CodinasionLogo from "assets/codinasion.png"
+
 
 export default function Home() {
     const [isMount, setMount] = useState<boolean>(false);
@@ -24,7 +26,7 @@ export default function Home() {
             <section className="p-3 xl:container mx-auto w-full relative">
                 <article className="w-full md:flex justify-center gap-5 lg:gap-10 items-center pt-20">
                     <Image
-                        src={"/img/icon-512x512.png"}
+                        src={CodinasionLogo}
                         alt="Codinasion Logo"
                         className="max-w-[300px] w-[100px] sm:w-[150px] md:w-[200px] lg:w-[300px] rounded-full shadow-lg shadow-neutral-500/60 -rotate-12"
                         width={500}
