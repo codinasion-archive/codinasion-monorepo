@@ -1,18 +1,26 @@
 {
-  "name": "program",
-  "version": "1.0.0",
-  "main": "action.js",
-  "type": "module",
-  "license": "MIT",
-  "engines": {
-    "node": ">=16.0.0"
+  "private": true,
+  "scripts": {
+    "clean": "turbo clean",
+    "dev": "dotenv -- turbo run dev --concurrency 16",
+    "lint": "turbo run lint",
+    "build": "turbo run build",
+    "build:local": "dotenv -- turbo run build",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json}\"",
+    "all": "turbo lint && pnpm build:local && pnpm test && pnpm format",
+    "publish-packages": "pnpm build:local && turbo run lint test && changeset version && changeset publish"
   },
-  "dependencies": {
-    "@actions/core": "^1.9.1",
-    "date-fns": "^2.29.3",
-    "gray-matter": "^4.0.3",
-    "node-fetch": "^3.2.10",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
-  }
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@turbo/gen": "^1.9.7",
+    "dotenv-cli": "latest",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "turbo": "^1.9.9"
+  },
+  "packageManager": "pnpm@7.15.0",
+  "name": "codinasion"
 }
