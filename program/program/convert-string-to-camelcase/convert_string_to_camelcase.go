@@ -21,6 +21,6 @@ func camelcase(str string) string {
 }
 
 func main() {
-	str := "hello world"
+	str := "hello coders"
 	fmt.Println(camelcase(str))
 }
