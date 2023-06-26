@@ -20,7 +20,7 @@ public static class ConvertDecimalToHexadecimal
         {15, "F"}
     };
 
-    public static void convertDecimalToHexadecimal(int number)
+    public static void convertDecimalToHexadecimal(int number = 10)
     {
         List<int> resultToConvert = new();
 
@@ -37,9 +37,9 @@ public static class ConvertDecimalToHexadecimal
     {
         string result = string.Empty;
 
-        foreach (int number in toConvert)
+        for (int i = toConvert.Count - 1; i >= 0; i--)
         {
-            result += hexadecimalMap[number];
+            result += hexadecimalMap[toConvert[i]];
         }
 
         return result;
