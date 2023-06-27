@@ -1,6 +1,6 @@
 public static class ConvertDecimalToHexadecimal
 {
-    private static Dictionary<int, string> hexadecimalMap = new()
+    private static Dictionary<int, string> hexadecimalMap = new Dictionary<int, string>()
     {
         {0, "0"},
         {1, "1"},
