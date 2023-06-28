@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public static class ConvertDecimalToHexadecimal
 {
     private static Dictionary<int, string> hexadecimalMap = new Dictionary<int, string>()
@@ -20,9 +23,9 @@ public static class ConvertDecimalToHexadecimal
         {15, "F"}
     };
 
-    public static void convertDecimalToHexadecimal(int number = 10)
+    public static void ConvertToHexadecimal(int number = 10)
     {
-        List<int> resultToConvert = new();
+        List<int> resultToConvert = new List<int>();
 
         while (number > 0)
         {
@@ -30,10 +33,10 @@ public static class ConvertDecimalToHexadecimal
             number /= 16;
         }
 
-        Console.WriteLine(createResult(resultToConvert));
+        Console.WriteLine(CreateResult(resultToConvert));
     }
 
-    private static string createResult(List<int> toConvert)
+    private static string CreateResult(List<int> toConvert)
     {
         string result = string.Empty;
 
@@ -43,5 +46,13 @@ public static class ConvertDecimalToHexadecimal
         }
 
         return result;
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        ConvertDecimalToHexadecimal.ConvertToHexadecimal(10);
     }
 }
