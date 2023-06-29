@@ -1,4 +1,4 @@
-// Haskell program to find roots of quadratic equation using the quadratic formula.
+-- Haskell program to find roots of quadratic equation using the quadratic formula.
 
 quadraticRoots :: Integral a => a -> a -> a -> (a, a)
 quadraticRoots a b c
