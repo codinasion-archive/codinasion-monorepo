@@ -20,7 +20,7 @@ func convertTimeTo24HourFormat(time12 string) string {
 
 func main() {
     var time12 string
-    fmt.Print("Input: ")
+    fmt.Print("Input : ")
     fmt.Scanln(&time12)
     time24 := convertTimeTo24HourFormat(time12)
     fmt.Println("Output :", time24)
