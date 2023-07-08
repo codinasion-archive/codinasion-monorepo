@@ -1,5 +1,10 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-my $decimal = 10; 
-print("Octal Equivalent : ", oct($decimal), "\n");
+
+print("Enter a decimal number: ");
+my $decimal = <STDIN>;
+chomp($decimal);
+
+my $octal = sprintf("%o", $decimal);
+print("Octal Equivalent: $octal\n");
