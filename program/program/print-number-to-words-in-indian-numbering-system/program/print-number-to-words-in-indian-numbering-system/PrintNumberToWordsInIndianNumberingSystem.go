@@ -6,100 +6,100 @@ import (
 )
 
 var (
-	unitsMap = map[int]string{
-		0: "",
-		1: "one",
-		2: "two",
-		3: "three",
-		4: "four",
-		5: "five",
-		6: "six",
-		7: "seven",
-		8: "eight",
-		9: "nine",
-	}
-
-	tenToNineteenMap = map[int]string{
-		10: "ten",
-		11: "eleven",
-		12: "twelve",
-		13: "thirteen",
-		14: "fourteen",
-		15: "fifteen",
-		16: "sixteen",
-		17: "seventeen",
-		18: "eighteen",
-		19: "nineteen",
+	onesMap = map[int]string{
+		0:  "",
+		1:  "One",
+		2:  "Two",
+		3:  "Three",
+		4:  "Four",
+		5:  "Five",
+		6:  "Six",
+		7:  "Seven",
+		8:  "Eight",
+		9:  "Nine",
+		10: "Ten",
+		11: "Eleven",
+		12: "Twelve",
+		13: "Thirteen",
+		14: "Fourteen",
+		15: "Fifteen",
+		16: "Sixteen",
+		17: "Seventeen",
+		18: "Eighteen",
+		19: "Nineteen",
 	}
 
 	tensMap = map[int]string{
-		2: "twenty",
-		3: "thirty",
-		4: "forty",
-		5: "fifty",
-		6: "sixty",
-		7: "seventy",
-		8: "eighty",
-		9: "ninety",
+		2: "Twenty",
+		3: "Thirty",
+		4: "Forty",
+		5: "Fifty",
+		6: "Sixty",
+		7: "Seventy",
+		8: "Eighty",
+		9: "Ninety",
 	}
 
 	scaleMap = map[int]string{
-		2: "thousand",
-		3: "lakh",
-		5: "crore",
-		7: "crore",
+		1:  "",
+		2:  "Thousand",
+		3:  "Lakh",
+		4:  "Crore",
+		5:  "Arab",
+		6:  "Kharab",
+		7:  "Neel",
+		8:  "Padma",
+		9:  "Shankh",
+		10: "Mahashankh",
 	}
+
+	separator = " "
 )
-
-func convertDigitToWord(digit int) string {
-	return unitsMap[digit]
-}
-
-func convertTensToWord(number int) string {
-	if number < 10 {
-		return convertDigitToWord(number)
-	} else if number < 20 {
-		return tenToNineteenMap[number]
-	} else {
-		tens := number / 10
-		digit := number % 10
-		if digit == 0 {
-			return tensMap[tens]
-		}
-		return tensMap[tens] + " " + convertDigitToWord(digit)
-	}
-}
 
 func convertNumberToWords(number int) string {
 	if number == 0 {
-		return "zero"
+		return "Zero"
+	}
+
+	sign := ""
+	if number < 0 {
+		sign = "Minus "
+		number = -number
+	}
+
+	parts := make([]string, 0)
+
+	for number > 0 {
+		if number%100 > 0 {
+			parts = append(parts, convertTwoDigitNumberToWords(number%100))
+		}
+		number /= 100
 	}
 
 	words := make([]string, 0)
-
-	for scale, scaleWord := range scaleMap {
-		if number < scale {
-			break
-		}
-		remaining := number % (scale * 10)
-		if remaining > 0 {
-			words = append(words, convertNumberToWords(remaining))
-		}
-		number /= scale * 10
-		if number > 0 {
-			words = append(words, scaleWord)
+	for i := len(parts) - 1; i >= 0; i-- {
+		if parts[i] != "" {
+			words = append(words, parts[i]+" "+scaleMap[i+1])
 		}
 	}
 
-	if number > 0 {
-		words = append(words, convertTensToWord(number))
-	}
+	return sign + strings.Join(words, separator)
+}
 
-	return strings.Join(words, " ")
+func convertTwoDigitNumberToWords(number int) string {
+	if number == 0 {
+		return ""
+	} else if number <= 19 {
+		return onesMap[number]
+	} else if number%10 == 0 {
+		return tensMap[number/10]
+	} else {
+		return tensMap[number/10] + separator + onesMap[number%10]
+	}
 }
 
 func main() {
-	number := 1234567890
+	number := 0
 	words := convertNumberToWords(number)
-	fmt.Printf("Number in words: %s\n", words)
+	fmt.Printf("%d : %s\n", number, words)
 }
