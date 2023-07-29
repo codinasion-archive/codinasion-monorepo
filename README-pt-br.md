@@ -15,6 +15,8 @@ Colabore, Crie, Inove: Juntos com o Open Source ❤️
 </a>
 
 </div>
+<br>
+
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linha colorida" width="100%" height="70%">
