@@ -22,9 +22,11 @@ Colabore, Crie, Inove: Juntos com o Open Source ❤️
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linha colorida" width="100%" height="70%">
 </div>
 
+<br>
+
 Leia este `Readme` em outras linguagens:
 
-<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/isyuricunha/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/isyuricunha/codinasion/blob/master/README-pt-br.md)</kbd>
+<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="linha colorida" width="100%" height="70%">
