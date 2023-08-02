@@ -16,6 +16,7 @@ fn main() {
     };
     
     let minutes = seconds / 60;
+    let remainder_sec = seconds - (minutes * 60);
     
-    println!("{} seconds is equal to {} minutes.", seconds, minutes);
+    println!("{} seconds is equal to {} minutes {} seconds.", seconds, minutes, remainder_sec);
 }
