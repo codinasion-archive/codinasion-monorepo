@@ -25,7 +25,7 @@ Collaborate, Create, Innovate: Together with Open Source ❤️
 
 Read this `Readme` in another language:
 
-<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd>
+<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README.md)</kbd> <kbd>[<img title="Português" alt="Português" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-pt-br.md)</kbd> <kbd>[<img title="Français" alt="Français" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/fr.svg" width="22">](https://github.com/codinasion/codinasion/blob/master/README-fr.md)</kbd>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
