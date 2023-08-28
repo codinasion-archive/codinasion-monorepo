@@ -1,3 +1,4 @@
-print "Please enter a character : ";
+print "Please enter a character: ";
 $char = <STDIN>;
-print("Ascii value of the given character : ".ord($char));
+chomp $char;
+print("Ascii value of " . substr($char, 0, 1) . " : " . ord($char) . "\n");
