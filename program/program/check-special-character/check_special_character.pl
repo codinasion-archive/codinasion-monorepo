@@ -1,7 +1,9 @@
-print "Please enter a character : ";
-my $s = <STDIN>;
-if ($s =~ /[@#\$\%\!\~\`\&\*\/]/) {
-    print "It is a Special character";
-}else{
-    print "Not a special character";
+print "Please enter a character: ";
+my $char = <STDIN>;
+chomp $char;
+
+if ($char =~ /[^a-zA-Z0-9]/) {
+    print "Special Character\n";
+} else {
+    print "Not a Special Character\n";
 }
