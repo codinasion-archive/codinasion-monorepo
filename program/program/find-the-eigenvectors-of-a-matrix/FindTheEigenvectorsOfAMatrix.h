@@ -8,8 +8,8 @@ using namespace Eigen;
 // Or use a package manager to install Eigen like "vcpkg".
 // Source: https://eigen.tuxfamily.org/dox/classEigen_1_1EigenSolver.html#a66288022802172e3ee059283b26201d7
 
-// Returning the eigenvector as MatrixXd type
-MatrixXd eigen_vectors(MatrixXd matrix_egv)
+// Returning the eigenvectors as MatrixXd type
+MatrixXd eigenvectors(MatrixXd matrix_egv)
 {
     EigenSolver<MatrixXd> eigenSolv(matrix_egv);
     MatrixXd eigen_m = eigenSolv.eigenvectors().real();
@@ -17,8 +17,8 @@ MatrixXd eigen_vectors(MatrixXd matrix_egv)
     return eigen_m;
 }
 
-// Returning the eigenvector as EigenSolver<MatrixXd> type
-EigenSolver<MatrixXd> eigen_vectors_solver(MatrixXd matrix_egv)
+// Returning the eigenvectors as EigenSolver<MatrixXd> type
+EigenSolver<MatrixXd> eigenvectors_solver(MatrixXd matrix_egv)
 {
     EigenSolver<MatrixXd> eigenSolv(matrix_egv);
 
@@ -26,7 +26,7 @@ EigenSolver<MatrixXd> eigen_vectors_solver(MatrixXd matrix_egv)
 }
 
 // eigenvectors help
-void eigen_vectors_help() 
+void eigenvectors_help() 
 {
     cout << "Eigenvectors: " << endl;
     cout << "The matrix given to the function must be square." << endl;
@@ -38,7 +38,7 @@ void eigen_vectors_help()
 }
 
 // example of use
-void eigen_vector_example() 
+void eigenvectors_example() 
 {
     MatrixXd matrix_egv(3, 3);
     matrix_egv << 1, 2, 3, 4, 5, 6, 7, 8, 9;
