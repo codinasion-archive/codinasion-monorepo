@@ -110,19 +110,20 @@ class FindTheAdjointOfAMatrix {
     /// <summary>
     public static void DisplayMatrix(int[,] matrix){
 
-        int n = matrix.GetLength(0);
+        int numRows = matrix.GetLength(0);
+        int numCols = matrix.GetLenght(1);
 
         Console.Write("[");
-        for(int i = 0; i< n; i++){
+        for(int i = 0; i < numRows; i++){
             Console.Write("[");
-            for(int j = 0; j < n; j++){
+            for(int j = 0; j < numCols; j++){
                 Console.Write(matrix[i, j]);
-                if(j != n - 1){
+                if(j != numCols - 1){
                     Console.Write(", ");
                 }
             }
             Console.Write("]");
-            if(i != n - 1){
+            if(i != numRows - 1){
                 Console.Write(", ");
             }
         }
