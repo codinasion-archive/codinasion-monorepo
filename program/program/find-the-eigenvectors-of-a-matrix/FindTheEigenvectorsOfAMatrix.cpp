@@ -4,9 +4,11 @@
 using namespace std;
 using namespace Eigen;
 
-// Eigen library must be stored somewhere to be included using absolute path pointing to .../Eigen/Dense.
-// Or use a package manager to install Eigen like "vcpkg".
-// Source: https://eigen.tuxfamily.org/dox/classEigen_1_1EigenSolver.html#a66288022802172e3ee059283b26201d7
+// Eigen library is used to find the eigen vector of a given matrix.
+// Eigen Library was downloaded from: https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2
+// Extracted and copied the folder "Eigen" into /usr/local/include using Linux Debian.
+// Or use a package manager to install Eigen like "vcpkg" for windows.
+// Referene code: https://eigen.tuxfamily.org/dox/classEigen_1_1EigenSolver.html#a66288022802172e3ee059283b26201d7
 
 // Returning the eigenvectors as MatrixXd type
 MatrixXd eigenvectors(MatrixXd matrix_egv)
@@ -17,24 +19,16 @@ MatrixXd eigenvectors(MatrixXd matrix_egv)
     return eigen_m;
 }
 
-// Returning the eigenvectors as EigenSolver<MatrixXd> type
-EigenSolver<MatrixXd> eigenvectors_solver(MatrixXd matrix_egv)
-{
-    EigenSolver<MatrixXd> eigenSolv(matrix_egv);
-
-    return eigenSolv;
-}
-
 // eigenvectors help
 void eigenvectors_help() 
 {
     cout << "Eigenvectors: " << endl;
-    cout << "The matrix given to the function must be square." << endl;
+    cout << "Only sqare Matrixes can be processed." << endl;
     cout << "The equation to solve is: AV = λV." << endl;
     cout << "Where:" << endl;
     cout << "A is the square given matrix." << endl;
     cout << "V is the eigenvectors to calculate and return as MatrixXd type." << endl;
-    cout << "λ is the eigenvalues." << endl;
+    cout << "λ is the eigenvalues." << endl << endl;
 }
 
 // example of use
@@ -42,13 +36,22 @@ void eigenvectors_example()
 {
     MatrixXd matrix_egv(3, 3);
     matrix_egv << 1, 2, 3, 4, 5, 6, 7, 8, 9;
-    cout << "Here is the matrix m[3]x[3]:\n" << matrix_egv << endl;
+    cout << "Eigenvectors example:" << endl;
+    cout << "Here is a square matrix m[3x3]:\n" << matrix_egv << endl;
     cout << "Created as follow:" << endl;
     cout << "MatrixXd matrix_egv(3, 3);" << endl;
     cout << "matrix_egv << 1, 2, 3, 4, 5, 6, 7, 8, 9;" << endl;
     cout << "Now, calling the function:" << endl;
-    cout << "eigen_vectors(matrix_egv)" << endl;
-    cout << "The matrix given to the function must be square." << endl;
-    cout << "The eigenvectors are: " << endl << eigen_vectors(matrix_egv) << endl;
+    cout << "eigenvectors(matrix_egv)" << endl;
+    cout << "The eigenvectors are: " << endl << eigenvectors(matrix_egv) << endl;
     cout << "It will return the eigenvectors as MatrixXd type." << endl;
+}
+
+int main ()
+{
+    eigenvectors_help();
+    cout << endl;
+    eigenvectors_example();
+
+    return 0;
 }
