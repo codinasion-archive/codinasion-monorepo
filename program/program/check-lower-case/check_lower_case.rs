@@ -9,5 +9,12 @@ fn main() {
         Ok(_) => (),
         Err(err) => println!("Could not parse input: {}", err)
     }
-    println!("Output: {}", str.to_lowercase());
+
+    for i in str.chars() {
+        if i.is_uppercase() {
+          println!("Output: Upper Case");
+            return;
+        }
+    }
+    println!("Output: Lower Case")
 }
