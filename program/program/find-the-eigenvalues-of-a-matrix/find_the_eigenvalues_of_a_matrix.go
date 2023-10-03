@@ -2,34 +2,35 @@ package main
 
 import (
 	"fmt"
-	"github.com/gonum/matrix/mat64"
-	"github.com/gonum/floats"
+	"log"
+
+	"gonum.org/v1/gonum/mat"
 )
 
 func main() {
 
-	matrixData := [][]float64{
-		{3.0, 1.0},
-		{1.0, 2.0},
+	data := []float64{
+		1, 2, 3,
+		4, 5, 6,
+		7, 8, 9,
 	}
 
 
-	matrix := mat64.NewDense(len(matrixData), len(matrixData[0]), nil)
-	for i := 0; i < len(matrixData); i++ {
-		matrix.SetRow(i, matrixData[i])
-	}
+	A := mat.NewDense(3, 3, data)
 
 
-	eigenvalues := make([]float64, len(matrixData))
-	ok := mat64.Eigenvalues(eigenvalues, matrix, nil)
+	var eig mat.Eigen
+	ok := eig.Factorize(A, false)
 	if !ok {
-		fmt.Println("Eigenvalue computation failed.")
-		return
+		log.Fatal("Eigenvalue computation failed")
 	}
+
+
+	eigenvalues := eig.Values(nil)
 
 
 	fmt.Println("Eigenvalues:")
-	for _, val := range eigenvalues {
-		fmt.Printf("%f\n", val)
+	for _, lambda := range eigenvalues {
+		fmt.Printf("%.15f\n", real(lambda))
 	}
 }
