@@ -1,16 +1,10 @@
 # This python script calculates the sum of the digits of a random number n
 
-
-def find_sum_of_digits_of_a_number():
+def find_sum_of_digits_of_a_number(n):
     sum_of_digits = 0
-    digits = input("Number: ")
-    for digit in digits:
+    for digit in n:
         sum_of_digits += int(digit)
     return sum_of_digits
-
-print(f'Result: {find_sum_of_digits_of_a_number()}')
-
-
 
 
 
