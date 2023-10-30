@@ -1,9 +1,4 @@
+numbers <- c(1, 2, 3, 4, 5)
+square_sum <- sum(numbers^2)
 
-input_numbers <- readline("put numbers: ")
-
-
-numbers <- as.numeric(strsplit(input_numbers, ",")[[1]])
-square_sum <- sum(numbers^2, na.rm = TRUE)
-
-
-print(paste("result:", square_sum))
+print(paste("The sum of squares of the numbers is:", square_sum))
