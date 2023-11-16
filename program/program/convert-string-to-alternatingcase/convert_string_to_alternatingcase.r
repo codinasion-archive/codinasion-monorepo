@@ -1,8 +1,15 @@
 convert_to_alternating_case <- function(input_string) {
   result <- ""
+  to_upper <- FALSE  # Start with converting the first character to lowercase
+
   for (char in strsplit(input_string, NULL)[[1]]) {
     if (char %in% letters) {
-      result <- paste0(result, ifelse(char %in% toupper(letters), tolower(char), toupper(char)))
+      if (to_upper) {
+        result <- paste0(result, toupper(char))
+      } else {
+        result <- paste0(result, tolower(char))
+      }
+      to_upper <- !to_upper  # Switch the case for the next character
     } else {
       result <- paste0(result, char)
     }
