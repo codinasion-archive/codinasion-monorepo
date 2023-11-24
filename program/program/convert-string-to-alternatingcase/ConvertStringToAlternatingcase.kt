@@ -1,9 +1,9 @@
 fun alternatingCase(input: String): String {
     return input.mapIndexed { index, char ->
-        if (char.isLowerCase()) {
-            if (index % 2 == 0) char.toUpperCase() else char
+        if (index % 2 == 0) {
+            char.toLowerCase()
         } else {
-            if (index % 2 == 0) char.toLowerCase() else char
+            char.toUpperCase()
         }
     }.joinToString("")
 }
