@@ -1,7 +1,7 @@
 convertToVowelcase <- function(inputString) {
   # Define a function to check if a character is a vowel
   isVowel <- function(char) {
-    vowels <- c("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+    vowels <- c("a", "e", "i", "o", "u")
     return(char %in% vowels)
   }
   
