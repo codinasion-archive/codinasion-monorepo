@@ -1,27 +1,17 @@
 import {
-  Mail,
-  Github,
-  Facebook,
-  Youtube,
-  Linkedin,
-  Twitter,
-  Mastodon,
-  OpenCollective,
-  RSS,
-  Instagram,
-} from "./icons";
+  SiGmail,
+  SiGithub,
+  SiYoutube,
+  SiTwitter,
+  SiOpencollective,
+} from "react-icons/si";
 
 const components = {
-  mail: Mail,
-  github: Github,
-  facebook: Facebook,
-  youtube: Youtube,
-  linkedin: Linkedin,
-  twitter: Twitter,
-  mastodon: Mastodon,
-  opencollective: OpenCollective,
-  rss: RSS,
-  instagram: Instagram,
+  mail: SiGmail,
+  github: SiGithub,
+  youtube: SiYoutube,
+  twitter: SiTwitter,
+  opencollective: SiOpencollective,
 };
 
 type SocialIconProps = {
