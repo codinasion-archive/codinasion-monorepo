@@ -1,14 +1,11 @@
-# Read input from the user
-n <- as.numeric(readline("Enter Number: "))
-i <- 1
-sum <- 0
-
-# While loop to calculate the sum of cubes
-while (i <= n) {
-  sum <- sum + i^3
-  i <- i + 1
+# Function to find the sum of cubes of numbers
+sumOfCubes <- function(numbers) {
+  return(sum(numbers^3))
 }
 
-# Print the result
-cat("Sum of cubes is: ", sum, "\n")
+# Example usage
+inputNumbers <- c(1, 2, 3, 4, 5)
+outputSum <- sumOfCubes(inputNumbers)
 
+cat("Input Numbers: ", inputNumbers, "\n")
+cat("Sum of Cubes  : ", outputSum, "\n")
