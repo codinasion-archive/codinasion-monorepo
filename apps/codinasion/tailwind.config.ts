@@ -17,7 +17,7 @@ const config: Config = {
         sans: ["var(--font-space-grotesk)", ...fontFamily.sans],
       },
       colors: {
-        primary: colors.pink,
+        primary: colors.blue,
         gray: colors.gray,
       },
       // @ts-ignore
