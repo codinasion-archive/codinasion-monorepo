@@ -50,7 +50,9 @@ export async function GetGoodFirstIssue({
   } as RequestInit);
 
   if (!response.ok) {
-    throw new Error("Failed to fetch Good First Issues");
+    throw new Error(
+      `Failed to fetch Good First Issues: ${response.statusText} for ${apiQuery}`,
+    );
   }
 
   const data = (await response.json()) as {
