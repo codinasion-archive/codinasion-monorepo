@@ -82,7 +82,7 @@ export function GetGoodFirstIssueLabelsData(
             count: 1,
           });
         } else {
-          // @ts-ignore
+          // @ts-expect-error
           labels[labelIndex].count++;
         }
       });

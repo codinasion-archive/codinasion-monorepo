@@ -1,3 +1,4 @@
+import PageTitle from "@/components/PageTitle";
 import GoodFirstIssuesComponent from "@/components/GoodFirstIssues/good-first-issues-component";
 import { GetGoodFirstIssue, GetGoodFirstIssueLabelsData } from "@/data";
 
@@ -11,7 +12,11 @@ export default async function GoodFirstIssuesPage(): Promise<JSX.Element> {
 
   return (
     <>
-      Good First Issues
+      <PageTitle
+        title="Good First Issues"
+        description="Find latest good first issues from open source projects on GitHub."
+      />
+
       <GoodFirstIssuesComponent
         goodFirstIssues={goodFirstIssues}
         goodFirstIssueLabelsData={goodFirstIssueLabelsData}

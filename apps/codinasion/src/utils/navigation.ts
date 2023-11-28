@@ -8,3 +8,15 @@ export function ScrollToTop() {
       behavior: "smooth",
     });
 }
+
+export function ScrollToBottom() {
+  // eslint-disable-next-line no-undef
+  window &&
+    // eslint-disable-next-line no-undef
+    window.scroll({
+      // eslint-disable-next-line no-undef
+      top: document.body.scrollHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+}

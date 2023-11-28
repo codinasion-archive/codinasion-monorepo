@@ -1,6 +1,10 @@
 "use client";
 
 import React from "react";
+import moment from "moment";
+import { FaClock } from "react-icons/fa";
+import { RiGitRepositoryFill } from "react-icons/ri";
+import Link from "@/components/Link";
 import { MarkdownToText, ScrollToTop } from "@/utils";
 import type { GoodFirstIssueType, GoodFirstIssueLabelDataType } from "@/types";
 
@@ -59,17 +63,35 @@ export default function GoodFirstIssuesComponent({
         <ul>
           {displayGoodFirstIssues.map((goodFirstIssue) => (
             <li key={goodFirstIssue.id} className="pb-5">
-              <article className="flex flex-col space-y-2 xl:space-y-0 border border-gray-200 dark:border-gray-700 rounded p-5">
+              <article className="flex flex-col space-y-2 xl:space-y-0 border border-gray-200 dark:border-gray-700 rounded p-4 shadow hover:shadow-xl dark:shadow-slate-800">
                 <div className="space-y-3">
-                  <div>
+                  <div className="space-y-2">
                     <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                      <a
+                      <Link
                         href={goodFirstIssue.html_url}
                         className="text-gray-900 dark:text-gray-100"
                       >
                         {goodFirstIssue.title}
-                      </a>
+                      </Link>
                     </h2>
+                    <p className="mt-2  text-gray-600 dark:text-gray-400">
+                      <RiGitRepositoryFill className="mr-2 mb-1 inline" />
+                      <span className="font-bold inline">
+                        {goodFirstIssue.repository_url.replace(
+                          "https://api.github.com/repos/",
+                          "",
+                        )}
+                      </span>
+                      <FaClock className="ml-5 mr-2 mb-1 inline" /> Created{" "}
+                      <span className="font-bold inline">
+                        {moment(goodFirstIssue.created_at).fromNow()}
+                      </span>
+                    </p>
+                    {goodFirstIssue.body && (
+                      <div className="prose max-w-none break-all text-gray-500 dark:text-gray-400">
+                        {MarkdownToText(goodFirstIssue.body.substring(0, 120))}
+                      </div>
+                    )}
                     <div className="flex flex-wrap">
                       {goodFirstIssue.labels?.map((label) => (
                         <span
@@ -81,11 +103,6 @@ export default function GoodFirstIssuesComponent({
                       ))}
                     </div>
                   </div>
-                  {goodFirstIssue.body && (
-                    <div className="prose max-w-none break-word text-gray-500 dark:text-gray-400">
-                      {MarkdownToText(goodFirstIssue.body.substring(0, 120))}
-                    </div>
-                  )}
                 </div>
               </article>
             </li>
