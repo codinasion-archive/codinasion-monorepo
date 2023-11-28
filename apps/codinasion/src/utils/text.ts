@@ -12,3 +12,10 @@ export function MarkdownToText(markdown: string): string {
     .replace(/\n{2,}/g, "\n") // Replace multiple line breaks with a single one
     .trim(); // Remove leading and trailing whitespace
 }
+
+export function ConvertToTitleCase(str: string): string {
+  return str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
