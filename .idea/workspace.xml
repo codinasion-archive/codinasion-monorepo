@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f37307e-6d03-4a0d-a7d5-34c0688bf3b1" name="Changes" comment="Commit for find-sum-of-digits-of-a-number.jl" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="qvk36elu" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2YbmuT9ga0at6AmMaEgrrFurUwH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;update-2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/swapnilmukherjee/Documents/GitHub/codinasion&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="codinasion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="codinasion" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f37307e-6d03-4a0d-a7d5-34c0688bf3b1" name="Changes" comment="" />
+      <created>1700802876988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700802876988</updated>
+      <workItem from="1700802879647" duration="5093000" />
+      <workItem from="1700881419983" duration="30000" />
+      <workItem from="1700965038447" duration="693000" />
+      <workItem from="1701054005094" duration="31000" />
+      <workItem from="1701054040297" duration="2308000" />
+      <workItem from="1701210447744" duration="913000" />
+      <workItem from="1701211472119" duration="43000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commit of find-sum-of-digits-of-a-number.jl">
+      <option name="closed" value="true" />
+      <created>1700807786178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700807786178</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit of find-sum-of-digits-of-a-number.jl">
+      <option name="closed" value="true" />
+      <created>1700808156842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700808156842</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;program/program/find-sum-of-digits-of-a-number/find-sum-of-digits-of-a-number.jl">
+      <option name="closed" value="true" />
+      <created>1700808201392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700808201392</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit for find-sum-of-digits-of-a-number.jl">
+      <option name="closed" value="true" />
+      <created>1701055158608</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701055158608</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit for find-sum-of-digits-of-a-number.jl">
+      <option name="closed" value="true" />
+      <created>1701210950736</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701210950736</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/program/program/find-lcm-of-two-numbers-by-recursion/FindLcmOfTwoNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hours-to-seconds/ConvertHoursToSeconds.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-ap-series/FindSumOfApSeries.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-inches-to-feet/ConvertInchesToFeet.js" />
+        <option value="$PROJECT_DIR$/program/program/find-length-of-a-string/FindLengthOfAString.js" />
+        <option value="$PROJECT_DIR$/program/program/find-surface-area-of-a-cube/FindSurfaceAreaOfACube.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-squares-of-numbers/FindSumOfSquaresOfNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/find-cube-root-of-a-number/FindCubeRootOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-binary-to-hexadecimal/ConvertBinaryToHexadecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-miles-to-inches/ConvertMilesToInches.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-days-to-hours/ConvertDaysToHours.js" />
+        <option value="$PROJECT_DIR$/program/program/swap-two-numbers-without-using-third-variable/SwapTwoNumbersWithoutUsingThirdVariable.js" />
+        <option value="$PROJECT_DIR$/program/program/print-numbers-from-1-to-n/PrintNumbersFrom1ToN.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-cuboid/FindAreaOfACuboid.js" />
+        <option value="$PROJECT_DIR$/program/program/check-integer-or-float/CheckIntegerOrFloat.js" />
+        <option value="$PROJECT_DIR$/program/program/print-reverse-of-a-string/PrintReverseOfAString.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-seconds-to-hours/ConvertSecondsToHours.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hexadecimal-to-binary/ConvertHexadecimalToBinary.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-titlecase/ConvertStringToTitlecase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-alternatingcase/ConvertStringToAlternatingcase.js" />
+        <option value="$PROJECT_DIR$/program/program/find-average-of-numbers/FindAverageOfNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-determinant-of-a-matrix/FindTheDeterminantOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/find-power-of-a-number-by-recursion/FindPowerOfANumberByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-meters-to-miles/ConvertMetersToMiles.js" />
+        <option value="$PROJECT_DIR$/program/program/find-volume-of-a-cube/FindVolumeOfACube.js" />
+        <option value="$PROJECT_DIR$/program/program/print-hello-world/PrintHelloWorld.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-average-of-all-numbers-in-an-array/FindTheAverageOfAllNumbersInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/calculate-the-combination-of-n-objects-taken-r-at-a-time/CalculateTheCombinationOfNObjectsTakenRAtATime.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-cofactor-of-a-matrix/FindTheCofactorOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-days-to-minutes/ConvertDaysToMinutes.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-binary-to-decimal/ConvertBinaryToDecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/find-minimum-of-n-numbers/FindMinimumOfNNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-octal-to-binary/ConvertOctalToBinary.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-camelcase/ConvertStringToCamelcase.js" />
+        <option value="$PROJECT_DIR$/program/program/print-ascii-value-of-a-string/PrintAsciiValueOfAString.js" />
+        <option value="$PROJECT_DIR$/program/program/find-square-of-a-number/FindSquareOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-seconds-to-days/ConvertSecondsToDays.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-n-natural-numbers/FindSumOfNNaturalNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/print-numbers-from-1-to-n-without-using-a-loop/PrintNumbersFrom1ToNWithoutUsingALoop.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-minutes-to-seconds/ConvertMinutesToSeconds.js" />
+        <option value="$PROJECT_DIR$/program/program/find-maximum-of-n-numbers/FindMaximumOfNNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-squares-of-numbers-by-recursion/FindSumOfSquaresOfNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hexadecimal-to-decimal/ConvertHexadecimalToDecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-decimal-to-binary/ConvertDecimalToBinary.js" />
+        <option value="$PROJECT_DIR$/program/program/find-surface-area-of-a-cylinder/FindSurfaceAreaOfACylinder.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-fahrenheit-to-celsius/ConvertFahrenheitToCelsius.js" />
+        <option value="$PROJECT_DIR$/program/program/check-palindrome-number/CheckPalindromeNumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-weeks-to-seconds/ConvertWeeksToSeconds.js" />
+        <option value="$PROJECT_DIR$/program/program/find-volume-of-a-sphere/FindVolumeOfASphere.js" />
+        <option value="$PROJECT_DIR$/program/program/check-valid-date/CheckValidDate.js" />
+        <option value="$PROJECT_DIR$/program/program/find-cube-of-a-number/FindCubeOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-pascalcase/ConvertStringToPascalcase.js" />
+        <option value="$PROJECT_DIR$/program/program/print-elements-of-an-array/PrintElementsOfAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/find-square-root-of-a-number/FindSquareRootOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-sentencecase/ConvertStringToSentencecase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-constantcase/ConvertStringToConstantcase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hours-to-days/ConvertHoursToDays.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-eigenvalues-of-a-matrix/FindTheEigenvaluesOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/find-average-of-digits-of-a-number/FindAverageOfDigitsOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-seconds-to-weeks/ConvertSecondsToWeeks.js" />
+        <option value="$PROJECT_DIR$/program/program/check-upper-case/CheckUpperCase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-pound-to-kilogram/ConvertPoundToKilogram.js" />
+        <option value="$PROJECT_DIR$/program/program/split-string-into-array-of-characters/SplitStringIntoArrayOfCharacters.js" />
+        <option value="$PROJECT_DIR$/program/program/check-palindrome-string/CheckPalindromeString.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-miles-to-kilometers/ConvertMilesToKilometers.js" />
+        <option value="$PROJECT_DIR$/program/program/add-two-matrices/AddTwoMatrices.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-maximum-sum-of-a-contiguous-subarray-(circular)/FindTheMaximumSumOfAContiguousSubarray(circular).js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hours-to-minutes/ConvertHoursToMinutes.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-n-natural-numbers-using-formula/FindSumOfNNaturalNumbersUsingFormula.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hours-to-weeks/ConvertHoursToWeeks.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-miles-to-feet/ConvertMilesToFeet.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-octal-to-hexadecimal/ConvertOctalToHexadecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/divide-two-numbers/DivideTwoNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/print-fibonacci-series-without-recursion/PrintFibonacciSeriesWithoutRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-transpose-of-a-matrix/FindTheTransposeOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-time-from-12-hour-to-24-hour-format/ConvertTimeFrom12HourTo24HourFormat.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-decimal-to-octal/ConvertDecimalToOctal.js" />
+        <option value="$PROJECT_DIR$/program/program/reverse-an-array/ReverseAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-numbers-by-recursion/FindSumOfNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/check-pangram-string/CheckPangramString.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-right-angled-triangle/FindAreaOfARightAngledTriangle.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-gp-series/FindSumOfGpSeries.js" />
+        <option value="$PROJECT_DIR$/program/program/print-fibonacci-series-by-recursion/PrintFibonacciSeriesByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-perimeter-of-a-rectangle/FindPerimeterOfARectangle.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-feet-to-centimeters/ConvertFeetToCentimeters.js" />
+        <option value="$PROJECT_DIR$/program/program/find-average-of-numbers-by-recursion/FindAverageOfNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-perimeter-of-a-square/FindPerimeterOfASquare.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-numbers/FindSumOfNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/find-gcd-of-two-numbers-by-recursion/FindGcdOfTwoNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-cube/FindAreaOfACube.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-rectangle/FindAreaOfARectangle.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-dotcase/ConvertStringToDotcase.js" />
+        <option value="$PROJECT_DIR$/program/program/print-inverted-pyramid-pattern/PrintInvertedPyramidPattern.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-days-to-weeks/ConvertDaysToWeeks.js" />
+        <option value="$PROJECT_DIR$/program/program/find-second-smallest-number-in-an-array/FindSecondSmallestNumberInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/print-reverse-of-a-number-by-recursion/PrintReverseOfANumberByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-time-from-24-hour-to-12-hour-format/ConvertTimeFrom24HourTo12HourFormat.js" />
+        <option value="$PROJECT_DIR$/program/program/find-largest-number-in-an-array/FindLargestNumberInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-minutes-to-hours/ConvertMinutesToHours.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-kebabcase/ConvertStringToKebabcase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-rupees-to-paise/ConvertRupeesToPaise.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-snakecase/ConvertStringToSnakecase.js" />
+        <option value="$PROJECT_DIR$/program/program/check-even-or-odd-number/CheckEvenOrOddNumber.js" />
+        <option value="$PROJECT_DIR$/program/program/find-negative-of-a-number/FindNegativeOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/cylindrically-rotate-a-matrix-by-90-degrees/CylindricallyRotateAMatrixBy90Degrees.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-reversecase/ConvertStringToReversecase.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-sum-of-all-numbers-in-an-array/FindTheSumOfAllNumbersInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/print-multiplication-table/PrintMultiplicationTable.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-adjoint-of-a-matrix/FindTheAdjointOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-vowelcase/ConvertStringToVowelcase.js" />
+        <option value="$PROJECT_DIR$/program/program/find-factorial-of-a-number-by-recursion/FindFactorialOfANumberByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-rank-of-a-matrix/FindTheRankOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/print-ascii-value-of-a-character/PrintAsciiValueOfACharacter.js" />
+        <option value="$PROJECT_DIR$/program/program/find-surface-area-of-a-cuboid/FindSurfaceAreaOfACuboid.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-eigenvectors-of-a-matrix/FindTheEigenvectorsOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-a-string-to-an-integer-(without-using-built-in-functions)/ConvertAStringToAnInteger(withoutUsingBuiltInFunctions).js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-n-natural-numbers-by-recursion/FindSumOfNNaturalNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/check-lower-case/CheckLowerCase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-seconds-to-minutes/ConvertSecondsToMinutes.js" />
+        <option value="$PROJECT_DIR$/program/program/find-volume-of-a-cuboid/FindVolumeOfACuboid.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-consonantcase/ConvertStringToConsonantcase.js" />
+        <option value="$PROJECT_DIR$/program/program/check-consonant/CheckConsonant.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-miles-to-meters/ConvertMilesToMeters.js" />
+        <option value="$PROJECT_DIR$/program/program/find-lcm-of-two-numbers/FindLcmOfTwoNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/calculate-simple-interest/CalculateSimpleInterest.js" />
+        <option value="$PROJECT_DIR$/program/program/print-all-prime-numbers-between-two-numbers/PrintAllPrimeNumbersBetweenTwoNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-kilometers-to-miles/ConvertKilometersToMiles.js" />
+        <option value="$PROJECT_DIR$/program/program/print-numbers-from-n-to-1/PrintNumbersFromNTo1.js" />
+        <option value="$PROJECT_DIR$/program/program/find-second-largest-number-in-an-array/FindSecondLargestNumberInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-weeks-to-minutes/ConvertWeeksToMinutes.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-centimeters-to-inches/ConvertCentimetersToInches.js" />
+        <option value="$PROJECT_DIR$/program/program/find-gcd-of-two-numbers/FindGcdOfTwoNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-binary-to-octal/ConvertBinaryToOctal.js" />
+        <option value="$PROJECT_DIR$/program/program/find-largest-and-smallest-numbers-in-an-array/FindLargestAndSmallestNumbersInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/merge-two-strings/MergeTwoStrings.js" />
+        <option value="$PROJECT_DIR$/program/program/find-smallest-number-in-an-array/FindSmallestNumberInAnArray.js" />
+        <option value="$PROJECT_DIR$/program/program/check-alphabet/CheckAlphabet.js" />
+        <option value="$PROJECT_DIR$/program/program/split-string-into-array-of-words/SplitStringIntoArrayOfWords.js" />
+        <option value="$PROJECT_DIR$/program/program/check-digit/CheckDigit.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-minutes-to-days/ConvertMinutesToDays.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-maximum-sum-of-a-contiguous-subarray-(kadanes-algorithm)/FindTheMaximumSumOfAContiguousSubarray(kadanesAlgorithm).js" />
+        <option value="$PROJECT_DIR$/program/program/convert-weeks-to-days/ConvertWeeksToDays.js" />
+        <option value="$PROJECT_DIR$/program/program/print-reverse-of-a-string-by-recursion/PrintReverseOfAStringByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-volume-of-a-cone/FindVolumeOfACone.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-digits-of-a-number-by-recursion/FindSumOfDigitsOfANumberByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-decimal-to-hexadecimal/ConvertDecimalToHexadecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-uppercase/ConvertStringToUppercase.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-days-to-seconds/ConvertDaysToSeconds.js" />
+        <option value="$PROJECT_DIR$/program/program/find-roots-of-quadratic-equation/FindRootsOfQuadraticEquation.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-inverse-of-a/FindTheInverseOfA.js" />
+        <option value="$PROJECT_DIR$/program/program/find-digital-root-of-a-number/FindDigitalRootOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-feet-to-miles/ConvertFeetToMiles.js" />
+        <option value="$PROJECT_DIR$/program/program/find-power-of-a-number/FindPowerOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/print-reverse-of-a-number/PrintReverseOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/print-pascals-triangle/PrintPascalsTriangle.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-feet-to-inches/ConvertFeetToInches.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-circle/FindAreaOfACircle.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-pathcase/ConvertStringToPathcase.js" />
+        <option value="$PROJECT_DIR$/program/program/find-weekend-days-from-number-of-years/FindWeekendDaysFromNumberOfYears.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-octal-to-decimal/ConvertOctalToDecimal.js" />
+        <option value="$PROJECT_DIR$/program/program/print-string-of-ascii-values/PrintStringOfAsciiValues.js" />
+        <option value="$PROJECT_DIR$/program/program/check-armstrong-number/CheckArmstrongNumber.js" />
+        <option value="$PROJECT_DIR$/program/program/check-vowel/CheckVowel.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-cubes-of-numbers-by-recursion/FindSumOfCubesOfNumbersByRecursion.js" />
+        <option value="$PROJECT_DIR$/program/program/find-volume-of-a-cylinder/FindVolumeOfACylinder.js" />
+        <option value="$PROJECT_DIR$/program/program/calculate-compound-interest/CalculateCompoundInterest.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-paise-to-rupees/ConvertPaiseToRupees.js" />
+        <option value="$PROJECT_DIR$/program/program/swap-two-numbers/SwapTwoNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/calculate-the-permutation-of-n-objects-taken-r-at-a-time/CalculateThePermutationOfNObjectsTakenRAtATime.js" />
+        <option value="$PROJECT_DIR$/program/program/print-number-to-words-in-indian-numbering-system/PrintNumberToWordsInIndianNumberingSystem.js" />
+        <option value="$PROJECT_DIR$/program/program/find-smallest-element-in-a-matrix/FindSmallestElementInAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/check-anagram-string/CheckAnagramString.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-inches-to-centimeters/ConvertInchesToCentimeters.js" />
+        <option value="$PROJECT_DIR$/program/program/check-leap-year/CheckLeapYear.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-celsius-to-fahrenheit/ConvertCelsiusToFahrenheit.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-string-to-lowercase/ConvertStringToLowercase.js" />
+        <option value="$PROJECT_DIR$/program/program/check-prime-number/CheckPrimeNumber.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-fahrenheit-to-kelvin/ConvertFahrenheitToKelvin.js" />
+        <option value="$PROJECT_DIR$/program/program/find-surface-area-of-a-cone/FindSurfaceAreaOfACone.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-cubes-of-numbers/FindSumOfCubesOfNumbers.js" />
+        <option value="$PROJECT_DIR$/program/program/find-sum-of-digits-of-a-number/FindSumOfDigitsOfANumber.js" />
+        <option value="$PROJECT_DIR$/program/program/check-special-character/CheckSpecialCharacter.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-a-string-to-an-integer/ConvertAStringToAnInteger.js" />
+        <option value="$PROJECT_DIR$/program/program/print-number-to-words/PrintNumberToWords.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-hexadecimal-to-octal/ConvertHexadecimalToOctal.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-weeks-to-hours/ConvertWeeksToHours.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-centimeters-to-feet/ConvertCentimetersToFeet.js" />
+        <option value="$PROJECT_DIR$/program/program/print-numbers-from-n-to-1-without-using-a-loop/PrintNumbersFromNTo1WithoutUsingALoop.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-inches-to-miles/ConvertInchesToMiles.js" />
+        <option value="$PROJECT_DIR$/program/program/print-pattern-1/PrintPattern1.js" />
+        <option value="$PROJECT_DIR$/program/program/find-area-of-a-square/FindAreaOfASquare.js" />
+        <option value="$PROJECT_DIR$/program/program/convert-minutes-to-weeks/ConvertMinutesToWeeks.js" />
+        <option value="$PROJECT_DIR$/program/program/find-the-trace-of-a-matrix/FindTheTraceOfAMatrix.js" />
+        <option value="$PROJECT_DIR$/program/program/print-floyds-triangle/PrintFloydsTriangle.js" />
+        <option value="$PROJECT_DIR$/program/program/print-diamond-pattern/PrintDiamondPattern.js" />
+        <option value="$PROJECT_DIR$/program/program/find-surface-area-of-a-sphere/FindSurfaceAreaOfASphere.js" />
+        <option value="$PROJECT_DIR$/program/program/find-average-of-digits-of-a-number-by-recursion/FindAverageOfDigitsOfANumberByRecursion.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit of find-sum-of-digits-of-a-number.jl with error handling" />
+    <MESSAGE value="Commit of find-sum-of-digits-of-a-number.jl" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;program/program/find-sum-of-digits-of-a-number/find-sum-of-digits-of-a-number.jl" />
+    <MESSAGE value="Commit for find-sum-of-digits-of-a-number.jl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit for find-sum-of-digits-of-a-number.jl" />
+  </component>
+</project>
