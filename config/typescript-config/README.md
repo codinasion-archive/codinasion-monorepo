@@ -1,8 +1,8 @@
-# `@codinasion/eslint-config`
+# `@codinasion/typescript-config`
 
-ESLint configurations for Codinasion projects.
+Typescript configurations for Codinasion projects.
 
-![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Feslint-config?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Feslint-config?logo=docusign&label=Downloads) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Feslint-config?logo=googledocs&logoColor=lightgray&label=LICENSE)
+![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Ftypescript-config?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Ftypescript-config?logo=docusign&label=Downloads) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Ftypescript-config?logo=googledocs&logoColor=lightgray&label=LICENSE)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -12,13 +12,13 @@ ESLint configurations for Codinasion projects.
 
 ```bash
 # if you're using pnpm
-pnpm add @codinasion/eslint-config
+pnpm add @codinasion/typescript-config
 
 # or, if you're using npm
-npm install @codinasion/eslint-config
+npm install @codinasion/typescript-config
 
 # or, if you're using yarn
-yarn add @codinasion/eslint-config
+yarn add @codinasion/typescript-config
 ```
 
 <div align="center">
@@ -27,18 +27,13 @@ yarn add @codinasion/eslint-config
 
 ## Usage
 
-Add the following to your `.eslintrc.js` file:
+Add the following to your `tsconfig.json` file:
 
-```typescript
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
-  root: true,
-  extends: ["@codinasion/eslint-config/next.js"],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: true,
-  },
-};
+```json
+{
+  "extends": "@codinasion/typescript-config/nextjs.json"
+  // ... other options
+}
 ```
 
 <div align="center">

@@ -10,15 +10,17 @@
     "dev": "dotenv -- turbo dev",
     "build": "turbo build",
     "build:local": "dotenv -- turbo build",
+    "build:packages": "pnpm build --filter !./apps/*",
     "test": "turbo test",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
     "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
-    "version-packages": "pnpm changeset version && pnpm all",
-    "publish-packages": "pnpm all && changeset version && changeset publish"
+    "all:packages": "pnpm format && turbo lint && pnpm build:packages && pnpm test",
+    "version-packages": "pnpm changeset version && pnpm all:packages",
+    "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@codinasion/eslint-config": "workspace:*",
+    "@codinasion/typescript-config": "workspace:*",
     "@changesets/cli": "latest",
     "dotenv-cli": "latest",
     "husky": "latest",
