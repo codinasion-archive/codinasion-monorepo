@@ -2,6 +2,8 @@
   "name": "codinasion",
   "private": true,
   "scripts": {
+    "git-fetch-prune-verbose": "git fetch --prune --verbose",
+    "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
     "prepare": "husky install",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
@@ -9,8 +11,10 @@
     "build": "turbo build",
     "build:local": "dotenv -- turbo build",
     "test": "turbo test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json}\"",
-    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test"
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
+    "version-packages": "pnpm changeset version && pnpm all",
+    "publish-packages": "pnpm all && changeset version && changeset publish"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
