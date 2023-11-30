@@ -1,26 +1,36 @@
 {
+  "name": "codinasion",
   "private": true,
   "scripts": {
-    "clean": "turbo clean",
-    "dev": "dotenv -- turbo run dev --concurrency 16",
-    "lint": "turbo run lint",
-    "build": "turbo run build",
-    "build:local": "dotenv -- turbo run build",
-    "test": "turbo run test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json}\"",
-    "all": "turbo lint && pnpm build:local && pnpm test && pnpm format",
-    "publish-packages": "pnpm build:local && turbo run lint test && changeset version && changeset publish"
+    "git-fetch-prune-verbose": "git fetch --prune --verbose",
+    "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
+    "prepare": "husky install",
+    "clone-submodules": "npx vercel-submodules --all",
+    "lint": "turbo lint",
+    "dev": "dotenv -- turbo dev",
+    "build": "turbo build",
+    "build:local": "dotenv -- turbo build",
+    "build:packages": "pnpm build --filter !./apps/*",
+    "test": "turbo test",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
+    "all:packages": "pnpm format && turbo lint && pnpm build:packages && pnpm test",
+    "version-packages": "pnpm changeset version && pnpm all:packages",
+    "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@turbo/gen": "^1.9.7",
+    "@codinasion/eslint-config": "workspace:*",
+    "@codinasion/typescript-config": "workspace:*",
+    "@changesets/cli": "latest",
     "dotenv-cli": "latest",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "^1.9.9"
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "turbo": "latest",
+    "vercel-submodules": "^1.0.10"
   },
-  "packageManager": "pnpm@7.15.0",
-  "name": "codinasion"
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  }
 }

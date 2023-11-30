@@ -1,5 +1,10 @@
 packages:
+  # include
   - "apps/*"
   - "assets"
-  - "github-bots/*"
-  - "packages/**/*"
+  - "config/**"
+  - "npm/**"
+
+  # exclude
+  - "!**/.next/**"
+  - "!**/node_modules/**"
