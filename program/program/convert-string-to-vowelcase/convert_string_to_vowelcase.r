@@ -2,6 +2,7 @@ convertToVowelcase <- function(inputString) {
   # Define a function to check if a character is a vowel
   isVowel <- function(char) {
     vowels <- c("a", "e", "i", "o", "u")
+    char <- tolower(char)  # Convert character to lowercase
     return(char %in% vowels)
   }
   
@@ -24,7 +25,7 @@ convertToVowelcase <- function(inputString) {
 }
 
 # Example usage
-inputString <- "hello world"
+inputString <- "Programming IS Fun"
 outputString <- convertToVowelcase(inputString)
 cat("Input  : ", inputString, "\n")
 cat("Output : ", outputString, "\n")
