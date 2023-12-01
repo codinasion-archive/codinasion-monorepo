@@ -12,10 +12,10 @@ importers:
         specifier: latest
         version: 2.26.2
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: workspace:*
         version: link:config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: workspace:*
         version: link:config/typescript-config
       '@manypkg/cli':
         specifier: latest
@@ -64,10 +64,10 @@ importers:
         version: 0.32.6
     devDependencies:
       '@codinasion/eslint-config':
-        specifier: 1.0.1
+        specifier: workspace:*
         version: link:../../config/eslint-config
       '@codinasion/typescript-config':
-        specifier: 1.0.1
+        specifier: workspace:*
         version: link:../../config/typescript-config
       '@next/eslint-plugin-next':
         specifier: ^14.0.2
@@ -132,15 +132,15 @@ importers:
   config/typescript-config: {}
 
   npm/examples/codinasion-examples:
-    devDependencies:
+    dependencies:
       codinasion:
-        specifier: 1.0.1
+        specifier: workspace:*
         version: link:../../packages/codinasion
 
   npm/examples/language-data-example:
-    devDependencies:
+    dependencies:
       '@codinasion/language-data':
-        specifier: 2.0.0
+        specifier: workspace:*
         version: link:../../packages/language-data
 
   npm/packages/codinasion:
