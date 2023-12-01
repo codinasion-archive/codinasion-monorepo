@@ -1,4 +1,9 @@
 function print_numbers_recursive(current, n)
+  if n<1
+    println(-1)
+    return
+  end
+  
   if current > n
       return
   end
