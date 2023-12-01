@@ -137,6 +137,84 @@ importers:
         specifier: workspace:*
         version: link:../../packages/codinasion
 
+  npm/examples/dsa/dsa-examples:
+    devDependencies:
+      '@codinasion/dsa':
+        specifier: workspace:*
+        version: link:../../../packages/dsa/dsa
+
+  npm/examples/dsa/queue-example:
+    devDependencies:
+      '@codinasion/queue':
+        specifier: workspace:*
+        version: link:../../../packages/dsa/queue
+
+  npm/examples/dsa/search/binary-search-example:
+    devDependencies:
+      '@codinasion/binary-search':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/search/binary-search
+
+  npm/examples/dsa/search/linear-search-example:
+    devDependencies:
+      '@codinasion/linear-search':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/search/linear-search
+
+  npm/examples/dsa/sort/bubble-sort-example:
+    devDependencies:
+      '@codinasion/bubble-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/bubble-sort
+
+  npm/examples/dsa/sort/counting-sort-example:
+    devDependencies:
+      '@codinasion/counting-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/counting-sort
+
+  npm/examples/dsa/sort/heap-sort-example:
+    devDependencies:
+      '@codinasion/heap-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/heap-sort
+
+  npm/examples/dsa/sort/insertion-sort-example:
+    devDependencies:
+      '@codinasion/insertion-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/insertion-sort
+
+  npm/examples/dsa/sort/merge-sort-example:
+    devDependencies:
+      '@codinasion/merge-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/merge-sort
+
+  npm/examples/dsa/sort/quick-sort-example:
+    devDependencies:
+      '@codinasion/quick-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/quick-sort
+
+  npm/examples/dsa/sort/radix-sort-example:
+    devDependencies:
+      '@codinasion/radix-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/radix-sort
+
+  npm/examples/dsa/sort/selection-sort-example:
+    devDependencies:
+      '@codinasion/selection-sort':
+        specifier: workspace:*
+        version: link:../../../../packages/dsa/sort/selection-sort
+
+  npm/examples/dsa/stack-example:
+    devDependencies:
+      '@codinasion/stack':
+        specifier: workspace:*
+        version: link:../../../packages/dsa/stack
+
   npm/examples/language-data-example:
     devDependencies:
       '@codinasion/language-data':
