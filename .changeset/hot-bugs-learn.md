@@ -4,4 +4,4 @@
 "@codinasion/eslint-config": patch
 ---
 
-Symlink Update (soft -> hard)
+Update symlink (soft -> hard)

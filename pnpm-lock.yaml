@@ -132,13 +132,13 @@ importers:
   config/typescript-config: {}
 
   npm/examples/codinasion-examples:
-    dependencies:
+    devDependencies:
       codinasion:
         specifier: workspace:*
         version: link:../../packages/codinasion
 
   npm/examples/language-data-example:
-    dependencies:
+    devDependencies:
       '@codinasion/language-data':
         specifier: workspace:*
         version: link:../../packages/language-data
