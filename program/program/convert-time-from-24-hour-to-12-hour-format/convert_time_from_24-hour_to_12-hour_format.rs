@@ -9,13 +9,34 @@ fn main() {
     // Parse the input time
     let parts: Vec<&str> = input_time.trim().split(':').collect();
     if parts.len() != 3 {
-        println!("Invalid input format. Please use HH:MM:SS");
+        println!("Error: Invalid input format. Please use HH:MM:SS");
         return;
     }
 
-    let hour: u32 = parts[0].parse().expect("Invalid hour");
-    let minute: u32 = parts[1].parse().expect("Invalid minute");
-    let second: u32 = parts[2].parse().expect("Invalid second");
+    // Validate and parse hours, minutes, and seconds
+    let hour: u32 = match parts[0].parse() {
+        Ok(value) if value <= 23 => value,
+        _ => {
+            println!("Error: Invalid hour");
+            return;
+        }
+    };
+
+    let minute: u32 = match parts[1].parse() {
+        Ok(value) if value <= 59 => value,
+        _ => {
+            println!("Error: Invalid minute. Please use minutes between 0 and 59");
+            return;
+        }
+    };
+
+    let second: u32 = match parts[2].parse() {
+        Ok(value) if value <= 59 => value,
+        _ => {
+            println!("Error: Invalid second. Please use seconds between 0 and 59");
+            return;
+        }
+    };
 
     // Convert to 12-hour format
     let mut formatted_hour = hour % 12;
