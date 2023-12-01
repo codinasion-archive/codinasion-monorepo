@@ -7,6 +7,6 @@
     "test": "find . -type f -name \"*.js\" -not -path \"./node_modules/*\" -exec sh -c 'val=$(node \"{}\"); echo \"{} ==> $val\"' \\;"
   },
   "devDependencies": {
-    "@codinasion/language-data": "workspace:*"
+    "@codinasion/language-data": "2.0.0"
   }
 }
