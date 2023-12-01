@@ -28,7 +28,12 @@ yarn add @codinasion/linear-search
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { LinearSearch } from "@codinasion/linear-search";
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const result = LinearSearch(arr, 5);
+console.log(result); // 4
 ```
 
 <div align="center">
