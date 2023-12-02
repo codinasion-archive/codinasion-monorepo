@@ -21,6 +21,7 @@ function KebabCaseStringToSentenceCaseString(str: string): string {
     .join(" ");
 }
 
+// TODO: Refactor this function (Complex Method Error)
 export default async function FetchProgramData({
   GITHUB_USERNAME,
   PROGRAM_REPONAME,

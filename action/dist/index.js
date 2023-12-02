@@ -34402,6 +34402,7 @@ function KebabCaseStringToSentenceCaseString(str) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
 }
+// TODO: Refactor this function (Complex Method Error)
 async function FetchProgramData({ GITHUB_USERNAME, PROGRAM_REPONAME, PROGRAM_PATH, GITHUB_TOKEN, TEST, }) {
     try {
         // Fetch program list from Github GraphQL API
