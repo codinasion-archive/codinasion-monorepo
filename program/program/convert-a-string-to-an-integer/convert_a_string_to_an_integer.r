@@ -1,5 +1,5 @@
-# Define the string
-string_value <- "123"
+# Prompt the user for input
+string_value <- readline(prompt="Enter: ")
 
 # Convert the string to an integer
 integer_value <- as.integer(string_value)
