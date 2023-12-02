@@ -24,6 +24,16 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+
       - name: Install dependencies
         run: pnpm install
 
