@@ -9,3 +9,9 @@ NC=$(tput -T xterm sgr0)
 # Actors
 CC="CC "
 CDR="CDR"
+
+# Protocols
+# Codinasion Husky Protocol
+PROTO_APPS="CH_PROTOCOL_001"
+PROTO_NPM="CH_PROTOCOL_002"
+PROTO_ACTION="CH_PROTOCOL_003"
