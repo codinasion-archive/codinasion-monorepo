@@ -2,24 +2,20 @@ import moment from "moment";
 import { FaClock } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import Link from "@/components/Link";
-import { ConvertToTitleCase, DecodeURL as DecodeLanguage } from "@/utils";
 import type { ProgramListType } from "@/types";
 
 interface Props {
   program: ProgramListType;
-  language?: string;
 }
 
-export default function ProgramCard({ program, language }: Props): JSX.Element {
+export default function ProgramCard({ program }: Props): JSX.Element {
   return (
     <article className="flex flex-col space-y-2 xl:space-y-0 border border-gray-200 dark:border-gray-700 rounded p-4 shadow hover:shadow-xl dark:shadow-slate-800">
       <div className="space-y-3">
         <div className="space-y-2">
           <h2 className="text-2xl font-bold leading-8 tracking-tight">
             <Link
-              href={`/program${language ? `/languages/${language}` : ``}/${
-                program.slug
-              }`}
+              href={`/program/${program.slug}`}
               className="text-gray-900 dark:text-gray-100"
             >
               {program.title}
@@ -27,9 +23,7 @@ export default function ProgramCard({ program, language }: Props): JSX.Element {
           </h2>
 
           <div className="prose max-w-none break-all text-gray-500 dark:text-gray-400">
-            Write a{" "}
-            {language ? ConvertToTitleCase(DecodeLanguage(language)) : ``}{" "}
-            program to {program.title.toLowerCase()}
+            Write a program to {program.title.toLowerCase()}
           </div>
 
           <p className="mt-2  text-gray-600 dark:text-gray-400">

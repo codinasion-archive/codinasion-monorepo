@@ -1,8 +1,12 @@
 import PageTitle from "@/components/PageTitle";
 import ProgramComponent from "@/components/Program/program-component";
 import { GetProgramList, GetProgramLanguageList } from "@/data";
+import { PROGRAM_LIST_PER_PAGE } from "./default";
 
-export const PROGRAM_LIST_PER_PAGE = 5;
+export const metadata = {
+  title: "Program",
+  description: "An open-source codebase for sharing programming solutions.",
+};
 
 export default async function ProgramPage(): Promise<JSX.Element> {
   /////////////////////////////////////////////////////////////////////////////

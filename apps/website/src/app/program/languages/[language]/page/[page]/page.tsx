@@ -1,7 +1,24 @@
 import PageTitle from "@/components/PageTitle";
 import ProgramComponent from "@/components/Program/program-component";
 import { GetProgramLanguageProgramList, GetProgramLanguageList } from "@/data";
-import { PROGRAM_LIST_PER_PAGE } from "../../../../page";
+import { PROGRAM_LIST_PER_PAGE } from "../../../../default";
+
+// https://beta.nextjs.org/docs/data-fetching/generating-static-params
+// Make this page statically generated, with dynamic params
+export const dynamicParams = true;
+export async function generateStaticParams(): Promise<
+  { language: string; page: string }[]
+> {
+  const languageList = await GetProgramLanguageList();
+  const paths = languageList.slice(0, 1).flatMap((language) => {
+    return Array.from({ length: 1 }, (_, i) => ({
+      language: language,
+      page: (i + 2).toString(), // start from 1 instead of 0
+    })).slice(0, 1);
+  });
+  return paths;
+}
+// End of static generation
 
 export default async function ProgramPage({
   params,
