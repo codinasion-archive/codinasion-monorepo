@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@codinasion/eslint-config": "workspace:*",
+    "@codinasion/language-data": "workspace:*",
     "@codinasion/typescript-config": "workspace:*",
     "@next/eslint-plugin-next": "^14.0.2",
     "@types/eslint": "^8.44.7",

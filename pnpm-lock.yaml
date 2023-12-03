@@ -127,6 +127,9 @@ importers:
       '@codinasion/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint-config
+      '@codinasion/language-data':
+        specifier: workspace:*
+        version: link:../../npm/packages/language-data
       '@codinasion/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript-config
