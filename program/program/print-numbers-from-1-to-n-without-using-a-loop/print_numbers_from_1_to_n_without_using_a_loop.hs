@@ -1,3 +1,4 @@
+--print numbers from 1 to n without using a loop.
 printNumbers :: Int -> IO ()
 printNumbers n = go 1
   where
