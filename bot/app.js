@@ -7,6 +7,7 @@
 const issueOpened = require("./handlers/issues-opened");
 const issueClosed = require("./handlers/issues-closed");
 const issueReopened = require("./handlers/issues-reopened");
+const issueCommentCreated = require("./handlers/issue-comment-created");
 const pullRequestOpened = require("./handlers/pull-request-opened");
 const pullRequestClosed = require("./handlers/pull-request-closed");
 const pullRequestReopened = require("./handlers/pull-request-reopened");
@@ -30,6 +31,11 @@ module.exports = (app) => {
   // on issue reopened
   app.on("issues.reopened", async (context) => {
     await issueReopened(app, context);
+  });
+
+  // on issue comment created
+  app.on("issue_comment.created", async (context) => {
+    await issueCommentCreated(app, context);
   });
 
   //**************** /////////// Pull Requests /////////// ****************//
