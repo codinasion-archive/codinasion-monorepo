@@ -1,6 +1,8 @@
 // export handler
 module.exports = handler;
 
+const GetPRSize = require("./get-pr-size");
+
 async function handler(app, context) {
   // skip for bots
   if (context.payload.pull_request.user.type === "Bot") {
@@ -56,6 +58,17 @@ This PR will be reviewed and merged shortly.`,
   await context.octokit.issues.addLabels(
     context.issue({
       labels: ["triage"],
+    }),
+  );
+
+  /////////////////////////////////////////////////////////////////
+  // Add Pull Request Size Label
+  const pullRequestSize = await GetPRSize(pull_request_data);
+
+  // add pull request size label
+  await context.octokit.issues.addLabels(
+    context.issue({
+      labels: [pullRequestSize],
     }),
   );
 }

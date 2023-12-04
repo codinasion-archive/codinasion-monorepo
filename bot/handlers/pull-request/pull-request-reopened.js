@@ -1,6 +1,8 @@
 // export handler
 module.exports = handler;
 
+const GetPRSize = require("./get-pr-size");
+
 async function handler(app, context) {
   if (context.payload.pull_request.user.type === "Bot") {
     return;
@@ -61,6 +63,41 @@ async function handler(app, context) {
     await context.octokit.pulls.update(
       context.pullRequest({
         title: new_title,
+      }),
+    );
+  }
+
+  /////////////////////////////////////////////////////////////////
+  // Add Pull Request Size Label
+  const pullRequestSize = await GetPRSize(pull_request_data);
+
+  // if loc label exists
+  if (labels.find((label) => label.name.startsWith("LOC: "))) {
+    const locLabel = labels.find((label) =>
+      label.name.startsWith("LOC: "),
+    ).name;
+
+    // if loc label is different
+    if (locLabel !== pullRequestSize) {
+      // remove loc label
+      await context.octokit.issues.removeLabel(
+        context.issue({
+          name: locLabel,
+        }),
+      );
+
+      // add loc label
+      await context.octokit.issues.addLabels(
+        context.issue({
+          labels: [pullRequestSize],
+        }),
+      );
+    }
+  } else {
+    // add loc label
+    await context.octokit.issues.addLabels(
+      context.issue({
+        labels: [pullRequestSize],
       }),
     );
   }

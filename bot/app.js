@@ -4,14 +4,15 @@
  */
 
 // import handlers
-const issueOpened = require("./handlers/issues-opened");
-const issueClosed = require("./handlers/issues-closed");
-const issueReopened = require("./handlers/issues-reopened");
-const issueCommentCreated = require("./handlers/issue-comment-created");
-const pullRequestOpened = require("./handlers/pull-request-opened");
-const pullRequestClosed = require("./handlers/pull-request-closed");
-const pullRequestReopened = require("./handlers/pull-request-reopened");
-const pullRequestUnlabeled = require("./handlers/pull-request-unlabeled");
+const issueOpened = require("./handlers/issue/issues-opened");
+const issueClosed = require("./handlers/issue/issues-closed");
+const issueReopened = require("./handlers/issue/issues-reopened");
+const issueCommentCreated = require("./handlers/issue/issue-comment-created");
+const pullRequestOpened = require("./handlers/pull-request/pull-request-opened");
+const pullRequestClosed = require("./handlers/pull-request/pull-request-closed");
+const pullRequestReopened = require("./handlers/pull-request/pull-request-reopened");
+const pullRequestUnlabeled = require("./handlers/pull-request/pull-request-unlabeled");
+const pullRequestEdited = require("./handlers/pull-request/pull-request-edited");
 
 module.exports = (app) => {
   app.log.info("Yay, the app was loaded!!!");
@@ -58,6 +59,11 @@ module.exports = (app) => {
   // on unlabeled pull request
   app.on("pull_request.unlabeled", async (context) => {
     await pullRequestUnlabeled(app, context);
+  });
+
+  // on pull request edited
+  app.on("pull_request.edited", async (context) => {
+    await pullRequestEdited(app, context);
   });
 
   //// For more information on building apps:
