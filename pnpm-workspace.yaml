@@ -1,9 +1,12 @@
 packages:
   # include
-  - "apps/*"
+  - "action"
   - "assets"
+  - "bot"
   - "config/**"
   - "npm/**"
+  - "og"
+  - "website"
 
   # exclude
   - "!**/.next/**"
