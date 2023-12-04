@@ -6,6 +6,6 @@
     "@sparticuz/chromium": "92.0.0",
     "dotenv": "16.3.1",
     "jimp": "^0.22.10",
-    "puppeteer-core": "10.0.0"
+    "puppeteer-core": "21.5.2"
   }
 }
