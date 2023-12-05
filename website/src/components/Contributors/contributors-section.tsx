@@ -63,7 +63,7 @@ export default function ContributorsSection({
             <h2 className="text-center text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
               Awesome Contributors
             </h2>
-            <p className="text-center text-lg font-normal">
+            <p className="text-center text-lg font-normal text-gray-600 dark:text-gray-400">
               Codinasion wouldn&apos;t be possible without the help of our
               awesome contributors.
             </p>

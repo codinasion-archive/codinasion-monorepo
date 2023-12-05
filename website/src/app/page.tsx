@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import ContributorsSection from "@/components/Home/contributors-section";
+import ContributorsSection from "@/components/Contributors/contributors-section";
 import { GetContributorsList } from "@/data";
 
 export default async function Page(): Promise<JSX.Element> {
