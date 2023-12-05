@@ -27,6 +27,7 @@ export default function ProgramContributorsComponent({
                   className="w-16 h-16 rounded-xl shadow-lg m-0.5"
                   height={128}
                   width={128}
+                  priority
                 />
               </Link>
             </div>
