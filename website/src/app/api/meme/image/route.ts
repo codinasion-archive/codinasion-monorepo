@@ -13,7 +13,8 @@ export async function GET() {
   return new Response(image, {
     headers: {
       "Content-Type": "image/png",
-      "Cache-Control": "public, max-age=86400",
+      // No cache
+      "Cache-Control": "no-cache",
     },
   });
 }
