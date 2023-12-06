@@ -10,6 +10,11 @@ export async function GET() {
       description: "Get a random meme data",
       source: "https://github.com/deep5050/programming-memes",
     },
+    {
+      path: "/api/meme/image",
+      description: "Get a random meme image",
+      source: "https://github.com/deep5050/programming-memes",
+    },
   ];
 
   return Response.json(availableRoutes);
