@@ -1,4 +1,4 @@
-import QuoteComponent from "@/components/Quotes/quote-component";
+import QuoteComponent from "@/components/Quote/quote-component";
 import { GetQuoteData } from "@/data";
 
 export default async function Page(): Promise<JSX.Element> {
