@@ -1,6 +1,8 @@
 import QuoteComponent from "@/components/Quote/quote-component";
 import { GetQuoteData } from "@/data";
 
+export const revalidate = 0;
+
 export default async function Page(): Promise<JSX.Element> {
   const QuoteData = await GetQuoteData();
 

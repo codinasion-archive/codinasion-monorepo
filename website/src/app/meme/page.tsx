@@ -3,6 +3,8 @@ import Link from "@/components/Link";
 import PageTitle from "@/components/PageTitle";
 import { GetMemeData } from "@/data";
 
+export const revalidate = 0;
+
 export default async function Page(): Promise<JSX.Element> {
   const MemeData = await GetMemeData();
 
