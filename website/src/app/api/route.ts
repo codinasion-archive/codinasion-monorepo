@@ -15,6 +15,11 @@ export async function GET() {
       description: "Get a random meme image",
       source: "https://github.com/deep5050/programming-memes",
     },
+    {
+      path: "/api/trending-repos",
+      description: "Get GitHub trending repos data",
+      source: "https://github.com/alisoft/github-trending-api",
+    },
   ];
 
   return Response.json(availableRoutes);
