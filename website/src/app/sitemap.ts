@@ -9,7 +9,14 @@ import { EncodeURL as EncodeLanguage } from "@/utils";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Add default pages
-  const routes = ["", "program", "quotes", "contributors"].map((route) => ({
+  const routes = [
+    "",
+    "program",
+    "quote",
+    "meme",
+    "contributors",
+    "trending-repos",
+  ].map((route) => ({
     url: `${SiteMetadata.site_url}/${route}`,
     lastModified: new Date(),
     changeFrequency: "daily" as "daily",

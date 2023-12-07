@@ -3,6 +3,8 @@ import CollectProgramData from "./action/collect-program-data";
 import CollectContributorsData from "./action/collect-contributors-data";
 import TweetGFIData from "./action/tweet-gfi-data";
 import TweetTrendingReposData from "./action/tweet-trending-repos-data";
+import TweetQuoteData from "./action/tweet-quote-data";
+import TweetMeme from "./action/tweet-meme";
 
 /**
  * The main function for the action.
@@ -36,6 +38,18 @@ export async function run(): Promise<void> {
     );
     if (TRIGGER_TWEET_TRENDING_REPOS_DATA === "true") {
       await TweetTrendingReposData();
+    }
+
+    const TRIGGER_TWEET_QUOTE_DATA: string = core.getInput(
+      "TRIGGER_TWEET_QUOTE_DATA",
+    );
+    if (TRIGGER_TWEET_QUOTE_DATA === "true") {
+      await TweetQuoteData();
+    }
+
+    const TRIGGER_TWEET_MEME: string = core.getInput("TRIGGER_TWEET_MEME");
+    if (TRIGGER_TWEET_MEME === "true") {
+      await TweetMeme();
     }
   } catch (error) {
     // Fail the workflow run if an error occurs
