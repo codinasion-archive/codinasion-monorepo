@@ -15,3 +15,19 @@ export async function GetTrandingReposData(): Promise<TrendingRepoType[]> {
 
   return data;
 }
+
+export async function GetTrandingReposLanguagesData(
+  trendingRepos: TrendingRepoType[],
+): Promise<string[]> {
+  const languages: string[] = [];
+
+  trendingRepos.forEach((repo) => {
+    if (repo.language) {
+      if (!languages.includes(repo.language)) {
+        languages.push(repo.language);
+      }
+    }
+  });
+
+  return languages;
+}
