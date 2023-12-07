@@ -28,7 +28,15 @@ yarn add @codinasion/octal-to-binary
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { OctalToBinary } from "@codinasion/octal-to-binary";
+
+const octal = "200";
+
+const binary = OctalToBinary(octal);
+console.log(binary);
+
+// Output
+// 10000000
 ```
 
 <div align="center">

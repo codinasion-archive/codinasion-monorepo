@@ -28,7 +28,15 @@ yarn add @codinasion/hexadecimal-to-octal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { HexadecimalToOctal } from "@codinasion/hexadecimal-to-octal";
+
+const hexadecimal = "80";
+
+const octal = HexadecimalToOctal(hexadecimal);
+console.log(octal);
+
+// Output
+// 200
 ```
 
 <div align="center">

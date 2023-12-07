@@ -237,6 +237,162 @@ importers:
         specifier: workspace:*
         version: link:../../packages/language-data
 
+  npm/examples/number-system/ascii/ascii-example:
+    devDependencies:
+      '@codinasion/ascii':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/ascii/ascii
+
+  npm/examples/number-system/ascii/ascii-to-binary-example:
+    devDependencies:
+      '@codinasion/ascii-to-binary':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/ascii/ascii-to-binary
+
+  npm/examples/number-system/ascii/ascii-to-decimal-example:
+    devDependencies:
+      '@codinasion/ascii-to-decimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/ascii/ascii-to-decimal
+
+  npm/examples/number-system/ascii/ascii-to-hexadecimal-example:
+    devDependencies:
+      '@codinasion/ascii-to-hexadecimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/ascii/ascii-to-hexadecimal
+
+  npm/examples/number-system/ascii/ascii-to-octal-example:
+    devDependencies:
+      '@codinasion/ascii-to-octal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/ascii/ascii-to-octal
+
+  npm/examples/number-system/binary/binary-example:
+    devDependencies:
+      '@codinasion/binary':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/binary/binary
+
+  npm/examples/number-system/binary/binary-to-ascii-example:
+    devDependencies:
+      '@codinasion/binary-to-ascii':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/binary/binary-to-ascii
+
+  npm/examples/number-system/binary/binary-to-decimal-example:
+    devDependencies:
+      '@codinasion/binary-to-decimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/binary/binary-to-decimal
+
+  npm/examples/number-system/binary/binary-to-hexadecimal-example:
+    devDependencies:
+      '@codinasion/binary-to-hexadecimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/binary/binary-to-hexadecimal
+
+  npm/examples/number-system/binary/binary-to-octal-example:
+    devDependencies:
+      '@codinasion/binary-to-octal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/binary/binary-to-octal
+
+  npm/examples/number-system/decimal/decimal-example:
+    devDependencies:
+      '@codinasion/decimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/decimal/decimal
+
+  npm/examples/number-system/decimal/decimal-to-ascii-example:
+    devDependencies:
+      '@codinasion/decimal-to-ascii':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/decimal/decimal-to-ascii
+
+  npm/examples/number-system/decimal/decimal-to-binary-example:
+    devDependencies:
+      '@codinasion/decimal-to-binary':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/decimal/decimal-to-binary
+
+  npm/examples/number-system/decimal/decimal-to-hexadecimal-example:
+    devDependencies:
+      '@codinasion/decimal-to-hexadecimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/decimal/decimal-to-hexadecimal
+
+  npm/examples/number-system/decimal/decimal-to-octal-example:
+    devDependencies:
+      '@codinasion/decimal-to-octal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/decimal/decimal-to-octal
+
+  npm/examples/number-system/hexadecimal/hexadecimal-example:
+    devDependencies:
+      '@codinasion/hexadecimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/hexadecimal/hexadecimal
+
+  npm/examples/number-system/hexadecimal/hexadecimal-to-ascii-example:
+    devDependencies:
+      '@codinasion/hexadecimal-to-ascii':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/hexadecimal/hexadecimal-to-ascii
+
+  npm/examples/number-system/hexadecimal/hexadecimal-to-binary-example:
+    devDependencies:
+      '@codinasion/hexadecimal-to-binary':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/hexadecimal/hexadecimal-to-binary
+
+  npm/examples/number-system/hexadecimal/hexadecimal-to-decimal-example:
+    devDependencies:
+      '@codinasion/hexadecimal-to-decimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/hexadecimal/hexadecimal-to-decimal
+
+  npm/examples/number-system/hexadecimal/hexadecimal-to-octal-example:
+    devDependencies:
+      '@codinasion/hexadecimal-to-octal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/hexadecimal/hexadecimal-to-octal
+
+  npm/examples/number-system/number-system-examples:
+    devDependencies:
+      '@codinasion/number-system':
+        specifier: workspace:*
+        version: link:../../../packages/number-system/number-system
+
+  npm/examples/number-system/octal/octal-example:
+    devDependencies:
+      '@codinasion/octal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/octal/octal
+
+  npm/examples/number-system/octal/octal-to-ascii-example:
+    devDependencies:
+      '@codinasion/octal-to-ascii':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/octal/octal-to-ascii
+
+  npm/examples/number-system/octal/octal-to-binary-example:
+    devDependencies:
+      '@codinasion/octal-to-binary':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/octal/octal-to-binary
+
+  npm/examples/number-system/octal/octal-to-decimal-example:
+    devDependencies:
+      '@codinasion/octal-to-decimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/octal/octal-to-decimal
+
+  npm/examples/number-system/octal/octal-to-hexadecimal-example:
+    devDependencies:
+      '@codinasion/octal-to-hexadecimal':
+        specifier: workspace:*
+        version: link:../../../../packages/number-system/octal/octal-to-hexadecimal
+
   npm/packages/codinasion:
     devDependencies:
       '@codinasion/eslint-config':

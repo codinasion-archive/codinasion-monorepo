@@ -28,7 +28,15 @@ yarn add @codinasion/octal-to-ascii
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { OctalToAscii } from "@codinasion/octal-to-ascii";
+
+const octal = "110";
+
+const ascii = OctalToAscii(octal);
+console.log(ascii);
+
+// Output
+// H
 ```
 
 <div align="center">

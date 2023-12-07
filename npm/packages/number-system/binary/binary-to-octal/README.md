@@ -28,7 +28,15 @@ yarn add @codinasion/binary-to-octal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { BinaryToOctal } from "@codinasion/binary-to-octal";
+
+const binary = "10000000";
+
+const octal = BinaryToOctal(binary);
+console.log(octal);
+
+// Output
+// 200
 ```
 
 <div align="center">

@@ -28,7 +28,15 @@ yarn add @codinasion/decimal-to-hexadecimal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { DecimalToHexadecimal } from "@codinasion/decimal-to-hexadecimal";
+
+const decimal = 128;
+
+const hexadecimal = DecimalToHexadecimal(decimal);
+console.log(hexadecimal);
+
+// Output
+// 80
 ```
 
 <div align="center">

@@ -28,7 +28,15 @@ yarn add @codinasion/binary
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { BinaryToDecimal } from "@codinasion/binary";
+
+const binary = "10000000";
+
+const decimal = BinaryToDecimal(binary);
+console.log(decimal);
+
+// Output
+// 128
 ```
 
 <div align="center">

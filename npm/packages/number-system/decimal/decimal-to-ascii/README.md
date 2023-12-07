@@ -28,7 +28,15 @@ yarn add @codinasion/decimal-to-ascii
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { DecimalToAscii } from "@codinasion/decimal-to-ascii";
+
+const decimal = 72;
+
+const ascii = DecimalToAscii(decimal);
+console.log(ascii);
+
+// Output
+// H
 ```
 
 <div align="center">

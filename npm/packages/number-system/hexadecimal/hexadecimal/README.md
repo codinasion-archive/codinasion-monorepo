@@ -28,7 +28,15 @@ yarn add @codinasion/hexadecimal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { HexadecimalToBinary } from "@codinasion/hexadecimal";
+
+const hexadecimal = "80";
+
+const binary = HexadecimalToBinary(hexadecimal);
+console.log(binary);
+
+// Output
+// 10000000
 ```
 
 <div align="center">

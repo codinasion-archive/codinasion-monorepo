@@ -28,7 +28,15 @@ yarn add @codinasion/octal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { OctalToDecimal } from "@codinasion/octal";
+
+const octal = "200";
+
+const decimal = OctalToDecimal(octal);
+console.log(decimal);
+
+// Output
+// 128
 ```
 
 <div align="center">

@@ -28,7 +28,15 @@ yarn add @codinasion/binary-to-hexadecimal
 ## Usage
 
 ```javascript
-// TODO: add usage examples
+import { BinaryToHexadecimal } from "@codinasion/binary-to-hexadecimal";
+
+const binary = "10000000";
+
+const hexadecimal = BinaryToHexadecimal(binary);
+console.log(hexadecimal);
+
+// Output
+// 80
 ```
 
 <div align="center">
