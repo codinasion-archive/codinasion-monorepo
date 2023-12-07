@@ -1,8 +1,8 @@
-# `@codinasion/number-system`
+# `@codinasion/ascii`
 
-A collection of useful TypeScript functions and utilities for number system conversions.
+A collection of useful TypeScript functions and utilities for converting ASCII to other number systems.
 
-![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Fnumber-system?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Fnumber-system?logo=docusign&label=Downloads&logoColor=white) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Fnumber-system?logo=googledocs&logoColor=white&label=LICENSE)
+![NPM Version](https://img.shields.io/npm/v/%40codinasion%2Fascii?color=33cd56&logo=npm) ![Downloads](https://img.shields.io/npm/dm/%40codinasion%2Fascii?logo=docusign&label=Downloads&logoColor=white) ![LICENSE](https://img.shields.io/npm/l/%40codinasion%2Fascii?logo=googledocs&logoColor=white&label=LICENSE)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/codinasion/codinasion/master/assets/rainbow-hr.png" alt="rainbow hr" width="100%" height="70%">
@@ -12,13 +12,13 @@ A collection of useful TypeScript functions and utilities for number system conv
 
 ```bash
 # if you're using pnpm
-pnpm add @codinasion/number-system
+pnpm add @codinasion/ascii
 
 # or, if you're using npm
-npm install @codinasion/number-system
+npm install @codinasion/ascii
 
 # or, if you're using yarn
-yarn add @codinasion/number-system
+yarn add @codinasion/ascii
 ```
 
 <div align="center">
