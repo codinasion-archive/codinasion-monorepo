@@ -1,0 +1,3 @@
+{
+  "extends": "@codinasion/typescript-config/base.json"
+}
