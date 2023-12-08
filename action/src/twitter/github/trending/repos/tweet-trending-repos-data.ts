@@ -1,7 +1,6 @@
 import * as core from "@actions/core";
 import fs from "fs";
 import fetch from "node-fetch";
-import "dotenv/config";
 import { TwitterApi } from "twitter-api-v2";
 import FetchTrendingReposData from "./fetch-trending-repos-data";
 import type { Response } from "node-fetch";
