@@ -2,7 +2,7 @@ name: Tweet Trending Repos Data
 
 on:
   schedule:
-    - cron: "17 19 * * *"
+    - cron: "7 19 * * *"
   workflow_dispatch:
     inputs:
       TEST:
