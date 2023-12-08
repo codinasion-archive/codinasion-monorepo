@@ -8,15 +8,11 @@
 
 
 # Code owners for Website(s) and api(s)
-/apps/                  @codinasion/web-dev     @harshraj8843
+/website/                  @codinasion/web-dev     @harshraj8843
 
 
 # Code owners for Github Bot(s)
 /github-bots/           @codinasion/github-bot  @harshraj8843
-
-
-# Code owners for npm package(s)
-/packages/npm/          @codinasion/npm         @harshraj8843
 
 
 # Code owners for README and translations
