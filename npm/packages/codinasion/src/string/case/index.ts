@@ -8,3 +8,4 @@ export * from "./pascal-case-string";
 export * from "./path-case-string";
 export * from "./sentence-case-string";
 export * from "./snake-case-string";
+export * from "./string";
