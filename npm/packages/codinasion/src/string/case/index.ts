@@ -5,3 +5,6 @@ export * from "./header-case-string";
 export * from "./kebab-case-string";
 export * from "./lower-case-string";
 export * from "./pascal-case-string";
+export * from "./path-case-string";
+export * from "./sentence-case-string";
+export * from "./snake-case-string";
