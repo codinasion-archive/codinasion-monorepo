@@ -1,3 +1,9 @@
+/**
+ * Converts a string in header case to camel case.
+ *
+ * @param str - The string to convert.
+ * @returns The converted camel case string.
+ */
 export function HeaderCaseStringToCamelCaseString(str: string): string {
   if (str.includes("-")) {
     return str

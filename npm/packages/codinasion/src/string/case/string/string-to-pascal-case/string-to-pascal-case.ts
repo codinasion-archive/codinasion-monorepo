@@ -1,3 +1,9 @@
+/**
+ * Converts a string to PascalCase.
+ *
+ * @param str - The input string to convert.
+ * @returns The converted string in PascalCase.
+ */
 export function StringToPascalCase(str: string): string {
   if (str.length === 0) {
     return "";

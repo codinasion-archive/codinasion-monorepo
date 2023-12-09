@@ -1,3 +1,9 @@
+/**
+ * Converts a constant case string to camel case string.
+ *
+ * @param str - The constant case string to convert.
+ * @returns The camel case string.
+ */
 export function ConstantCaseStringToCamelCaseString(str: string): string {
   if (str.includes("_")) {
     return str

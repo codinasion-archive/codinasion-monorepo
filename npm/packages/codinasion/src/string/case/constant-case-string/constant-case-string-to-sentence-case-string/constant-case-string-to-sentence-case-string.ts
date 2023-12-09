@@ -1,3 +1,9 @@
+/**
+ * Converts a constant case string to sentence case string.
+ *
+ * @param str - The constant case string to convert.
+ * @returns The converted sentence case string.
+ */
 export function ConstantCaseStringToSentenceCaseString(str: string): string {
   if (str.includes("_")) {
     return str

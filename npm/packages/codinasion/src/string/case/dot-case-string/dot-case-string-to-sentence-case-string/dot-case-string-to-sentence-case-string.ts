@@ -1,3 +1,9 @@
+/**
+ * Converts a dot-case string to sentence case string.
+ *
+ * @param str - The dot-case string to convert.
+ * @returns The converted sentence case string.
+ */
 export function DotCaseStringToSentenceCaseString(str: string): string {
   if (str.includes(".")) {
     return str

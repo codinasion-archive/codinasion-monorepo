@@ -1,3 +1,9 @@
+/**
+ * Converts a string to snake case.
+ *
+ * @param str - The string to convert.
+ * @returns The snake case representation of the input string.
+ */
 export function StringToSnakeCase(str: string): string {
   if (str.length === 0) {
     return "";

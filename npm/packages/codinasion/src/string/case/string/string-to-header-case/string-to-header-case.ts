@@ -1,3 +1,9 @@
+/**
+ * Converts a string to header case.
+ *
+ * @param str - The input string to convert.
+ * @returns The converted string in header case.
+ */
 export function StringToHeaderCase(str: string): string {
   if (str.length === 0) {
     return "";
