@@ -9,3 +9,5 @@ export * from "./path-case-string";
 export * from "./sentence-case-string";
 export * from "./snake-case-string";
 export * from "./string";
+export * from "./title-case-string";
+export * from "./upper-case-string";
