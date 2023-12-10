@@ -1,26 +1,55 @@
 {
+  "name": "codinasion-turbo-repo",
   "private": true,
   "scripts": {
-    "clean": "turbo clean",
-    "dev": "dotenv -- turbo run dev --concurrency 16",
-    "lint": "turbo run lint",
-    "build": "turbo run build",
-    "build:local": "dotenv -- turbo run build",
-    "test": "turbo run test",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json}\"",
-    "all": "turbo lint && pnpm build:local && pnpm test && pnpm format",
-    "publish-packages": "pnpm build:local && turbo run lint test && changeset version && changeset publish"
+    "git-fetch-prune-verbose": "git fetch --prune --verbose",
+    "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
+    "prepare": "husky install",
+    "postinstall": "manypkg check",
+    "clone-submodules": "npx vercel-submodules --all",
+    "lint": "turbo lint",
+    "lint:website": "pnpm lint --filter ./website",
+    "lint:packages": "pnpm lint --filter !./website",
+    "dev": "dotenv -- turbo dev",
+    "build": "turbo build",
+    "build:local": "dotenv -- turbo build",
+    "build:local:website": "dotenv -- turbo build --filter ./website",
+    "build:packages": "pnpm build --filter !./website",
+    "test": "turbo test",
+    "test:website": "pnpm test --filter ./website",
+    "test:packages": "pnpm test --filter !./website --filter !./npm/examples/**",
+    "test:examples": "pnpm test --filter *-example*",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:website": "prettier --write \"website/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:packages": "prettier --write \"npm/packages/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:examples": "prettier --write \"npm/examples/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:action": "prettier --write \"action/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
+    "all:website": "pnpm format:website && pnpm lint:website && pnpm build:local:website && pnpm test:website",
+    "all:packages": "pnpm format:packages && pnpm lint:packages && pnpm build:packages && pnpm test:packages",
+    "all:examples": "pnpm format:examples && pnpm test:examples",
+    "version-packages": "pnpm changeset version && pnpm all:packages",
+    "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
-  "devDependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@turbo/gen": "^1.9.7",
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
+  },
+  "dependencies": {
+    "@changesets/cli": "latest",
+    "@codinasion/eslint-config": "workspace:*",
+    "@codinasion/typescript-config": "workspace:*",
+    "@manypkg/cli": "latest",
     "dotenv-cli": "latest",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11",
-    "turbo": "^1.9.9"
-  },
-  "packageManager": "pnpm@7.15.0",
-  "name": "codinasion"
+    "husky": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "turbo": "latest",
+    "vercel-submodules": "^1.0.10"
+  }
 }
