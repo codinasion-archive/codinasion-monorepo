@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-// import ScrollNavigartion from "@/components/ScrollNavigartion";
+import ScrollNavigartion from "@/components/ScrollNavigartion";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
         </section>
 
         <Footer />
-        {/* <ScrollNavigartion /> */}
+        <ScrollNavigartion />
       </div>
     </>
   );
