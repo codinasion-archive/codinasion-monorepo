@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
+import Footer from "@/components/Footer";
 // import ScrollNavigartion from "@/components/ScrollNavigartion";
 
 interface LayoutProps {
@@ -16,10 +16,9 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
           <div className="flex min-h-screen flex-col justify-between font-sans">
             <main className="my-5">{children}</main>
           </div>
-
-          {/* <Footer /> */}
         </section>
 
+        <Footer />
         {/* <ScrollNavigartion /> */}
       </div>
     </>
