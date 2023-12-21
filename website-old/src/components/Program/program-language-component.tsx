@@ -28,7 +28,7 @@ export default function ProgramLanguageComponent({
                       name: language
                         .replace(/-sharp/g, "#")
                         .replace(/-plus/g, "+"),
-                    })[0]?.logo || "/codinasion.png"
+                    })[0]?.logo || "/logo.png"
                   }
                   alt={language}
                   className="w-16 rounded shadow-lg"

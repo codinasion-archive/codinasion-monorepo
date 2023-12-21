@@ -1,6 +1,6 @@
 import { SiteMetadata } from "@/data";
 import { NavbarLinksData } from "@/data";
-import Logo from "@/public/codinasion.png";
+import Logo from "@/public/logo.png";
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 import MobileNav from "./MobileNav";
