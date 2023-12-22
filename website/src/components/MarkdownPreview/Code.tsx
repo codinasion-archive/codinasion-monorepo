@@ -27,12 +27,12 @@ function Code({ className, children, ...props }: CodeProps): JSX.Element {
       {...props}
       PreTag="div"
     >
-      {String(children).replace(/\n$/, "")}
+      {String(children.trim()).replace(/\n$/, "")}
     </SyntaxHighlighter>
   ) : (
     // Inline code
     <kbd className="bg-base-300 rounded-md px-2 pt-1 font-mono break-words">
-      {String(children).replace(/\n$/, "")}
+      {String(children.trim()).replace(/\n$/, "")}
     </kbd>
   );
 }
