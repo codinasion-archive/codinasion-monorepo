@@ -6,9 +6,12 @@ import { GetProgramList, GetProgramLanguageList } from "@/data";
 import { PROGRAM_LIST_PER_PAGE } from "./default";
 
 export async function generateMetadata(): Promise<Metadata> {
+  const LanguageList = await GetProgramLanguageList();
+
   return SEO({
     title: "Program",
     description: "An open-source codebase for sharing programming solutions.",
+    keywords: ["codinasion", "program", "open source", ...LanguageList],
   });
 }
 

@@ -38,7 +38,7 @@ export default function SEO({
     twitter: {
       card: "summary_large_image",
       title: `${title} | ${SiteMetadata.title}`,
-      description: SiteMetadata.description,
+      description: description || SiteMetadata.description,
       siteId: SiteMetadata.twitter_userid,
       creator: `@${SiteMetadata.twitter_username}`,
       creatorId: SiteMetadata.twitter_userid,
