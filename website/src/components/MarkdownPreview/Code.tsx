@@ -31,7 +31,7 @@ function Code({ className, children, ...props }: CodeProps): JSX.Element {
     </SyntaxHighlighter>
   ) : (
     // Inline code
-    <kbd className="bg-gray-300 dark:bg-gray-800 rounded-md px-2 pt-1 font-mono break-words">
+    <kbd className="bg-base-300 rounded-md px-2 pt-1 font-mono break-words">
       {String(children).replace(/\n$/, "")}
     </kbd>
   );
