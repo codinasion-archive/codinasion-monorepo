@@ -1,4 +1,4 @@
-function getTheHighstSumInArr(arr) {
+function getTheHighstSumInArr(nums) {
   if(nums.length === 1 ) return nums[0];
   let maxSum = Number.NEGATIVE_INFINITY;
   let sum = 0;
