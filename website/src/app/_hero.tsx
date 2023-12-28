@@ -11,6 +11,7 @@ export default function Hero() {
           className="rounded-lg shadow-2xl max-w-sm hidden lg:block"
           width={500}
           height={500}
+          priority={true}
         />
         <div className="w-full">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
