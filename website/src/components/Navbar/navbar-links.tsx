@@ -1,5 +1,6 @@
 import Link from "@/components/Link";
-import { NavbarLinksData } from "@/data";
+import Icon from "@/components/Icon";
+import { SiteMetadata, NavbarLinksData } from "@/data";
 
 export default function NavbarLinks() {
   return (
@@ -8,11 +9,14 @@ export default function NavbarLinks() {
         <Link
           key={index}
           href={item.href}
-          className="rounded-lg p-2.5 text-sm font-medium"
+          className="rounded-lg p-2.5 text-sm font-semibold"
         >
           {item.title}
         </Link>
       ))}
+
+      <Icon kind="github" href={SiteMetadata.github_url} size={5} />
+      <Icon kind="twitter" href={SiteMetadata.twitter_url} size={5} />
     </div>
   );
 }

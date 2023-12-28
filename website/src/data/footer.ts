@@ -1,4 +1,3 @@
-import { SiteMetadata } from "./sitemetadata";
 import type { FooterLinkCategoryType } from "@/types";
 
 const FooterLinksData: FooterLinkCategoryType[] = [
@@ -30,7 +29,6 @@ const FooterLinksData: FooterLinkCategoryType[] = [
         href: "https://github.com/orgs/codinasion/discussions",
         title: "Discussions",
       },
-      { href: `mailto:${SiteMetadata.email}`, title: "Contact Us" },
       { href: "/sitemap.xml", title: "Sitemap" },
     ],
   },

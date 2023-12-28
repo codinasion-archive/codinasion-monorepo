@@ -1,7 +1,7 @@
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 import PoweredByVercel from "./powered-by-vercel";
-import SocialIcon from "./social-icon";
+import Icon from "@/components/Icon";
 import { FooterLinksData, SiteMetadata } from "@/data";
 
 export default function FooterComponent() {
@@ -24,6 +24,30 @@ export default function FooterComponent() {
               </span>
             </Link>
             <p className="mb-3 mt-4 max-w-sm">{SiteMetadata.description}</p>
+
+            <div className="mt-10">
+              <span className="text-lg font-bold">Become a Sponsor</span>
+              <div className="flex mt-2">
+                <Icon
+                  kind="github"
+                  href={SiteMetadata.github_sponsor_url}
+                  size={5}
+                  tooltip_text="GitHub Sponsors"
+                />
+                <Icon
+                  kind="patreon"
+                  href={SiteMetadata.patreon_url}
+                  size={5}
+                  tooltip_text="Patreon"
+                />
+                <Icon
+                  kind="opencollective"
+                  href={SiteMetadata.open_collective_url}
+                  size={5}
+                  tooltip_text="Open Collective"
+                />
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             {FooterLinksData.map((item, index) => (
@@ -55,23 +79,11 @@ export default function FooterComponent() {
             <PoweredByVercel />
           </div>
 
-          <div className="mb-5 flex space-x-4">
-            <SocialIcon
-              kind="mail"
-              href={`mailto:${SiteMetadata.email}`}
-              size={6}
-            />
-            <SocialIcon kind="github" href={SiteMetadata.github_url} size={6} />
-            <SocialIcon
-              kind="twitter"
-              href={SiteMetadata.twitter_url}
-              size={6}
-            />
-            <SocialIcon
-              kind="youtube"
-              href={SiteMetadata.youtube_url}
-              size={6}
-            />
+          <div className="mb-5 flex">
+            <Icon kind="mail" href={`mailto:${SiteMetadata.email}`} size={5} />
+            <Icon kind="github" href={SiteMetadata.github_url} size={5} />
+            <Icon kind="twitter" href={SiteMetadata.twitter_url} size={5} />
+            <Icon kind="youtube" href={SiteMetadata.youtube_url} size={5} />
           </div>
         </div>
       </div>
