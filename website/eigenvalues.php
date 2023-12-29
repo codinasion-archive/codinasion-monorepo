@@ -1,5 +1,8 @@
 <?php
 
+// Install PHPMatrix library using Composer:
+// composer require jameshalsall/php-matrix
+
 // Load the Composer autoloader
 require 'vendor/autoload.php';
 
