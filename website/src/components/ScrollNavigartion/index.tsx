@@ -22,21 +22,21 @@ export default function ScrollNavigartion() {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 hidden flex-col gap-3 ${
+      className={`fixed bottom-10 right-5 hidden flex-col gap-3 ${
         show ? "md:flex" : "md:hidden"
       }`}
     >
       <button
         aria-label="Scroll To Bottom"
         onClick={ScrollToBottom}
-        className="rounded-full bg-gray-200 p-2 text-gray-500 transition-all hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600"
+        className="btn btn-ghost btn-circle"
       >
         <FaArrowDown className="h-5 w-5" strokeWidth={5} />
       </button>
       <button
         aria-label="Scroll To Top"
         onClick={ScrollToTop}
-        className="rounded-full bg-gray-200 p-2 text-gray-500 transition-all hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-600"
+        className="btn btn-ghost btn-circle"
       >
         <FaArrowUp className="h-5 w-5" strokeWidth={5} />
       </button>
