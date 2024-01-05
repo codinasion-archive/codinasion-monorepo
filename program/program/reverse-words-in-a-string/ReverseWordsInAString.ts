@@ -5,4 +5,4 @@ function reverseWords(input: string): string {
 }
 
 const input = "Hello World";
-return reverseWords(input);
+console.log(reverseWords(input))
