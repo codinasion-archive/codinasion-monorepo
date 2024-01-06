@@ -32,4 +32,8 @@ class ReverseWordsInAString {
 		return result.toString().trim();
 	}
 
+	public static void main(String[] args) {
+		System.out.println(reverseWordsInAString("Hello World"));
+	}
+
 }
