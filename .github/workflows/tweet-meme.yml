@@ -2,7 +2,7 @@ name: Tweet Meme
 
 on:
   schedule:
-    - cron: "17 2/3 * * *"
+    - cron: "17 0/1 * * *"
   workflow_dispatch:
     inputs:
       TEST:
@@ -13,6 +13,9 @@ on:
 
 jobs:
   tweet-meme:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Tweet Meme
 
     runs-on: "ubuntu-latest"

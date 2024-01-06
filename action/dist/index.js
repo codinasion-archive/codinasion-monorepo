@@ -41410,6 +41410,123 @@ exports.GetLanguageData = r;
 
 /***/ }),
 
+/***/ 7444:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const auto_create_issue_1 = __importDefault(__nccwpck_require__(9653));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function AutoCreateIssue() {
+    try {
+        (0, auto_create_issue_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = AutoCreateIssue;
+// // Test the function
+// AutoCreateIssue();
+
+
+/***/ }),
+
+/***/ 4148:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const auto_track_issue_1 = __importDefault(__nccwpck_require__(7461));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function AutoTrackIssue() {
+    try {
+        (0, auto_track_issue_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            AUTO_TRACK_ISSUE_NUMBER: core.getInput("AUTO_TRACK_ISSUE_NUMBER") || "",
+            AUTO_TRACK_ISSUE_TITLE: core.getInput("AUTO_TRACK_ISSUE_TITLE") || "",
+            AUTO_TRACK_ISSUE_BODY: core.getInput("AUTO_TRACK_ISSUE_BODY") || "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = AutoTrackIssue;
+// // Test the function
+// AutoTrackIssue();
+
+
+/***/ }),
+
 /***/ 3364:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
@@ -41527,6 +41644,125 @@ async function CollectProgramData() {
 exports["default"] = CollectProgramData;
 // // Test the function
 // CollectProgramData();
+
+
+/***/ }),
+
+/***/ 410:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const submit_program_comment_close_1 = __importDefault(__nccwpck_require__(2144));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function SubmitProgramCommentClose() {
+    try {
+        (0, submit_program_comment_close_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            SUBMIT_PROGRAM_ISSUE_NUMBER: core.getInput("SUBMIT_PROGRAM_ISSUE_NUMBER") || "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgramCommentClose;
+// // Test the function
+// SubmitProgramCommentClose();
+
+
+/***/ }),
+
+/***/ 4550:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const submit_program_1 = __importDefault(__nccwpck_require__(8475));
+const dotenv_1 = __importDefault(__nccwpck_require__(8374));
+dotenv_1.default.config();
+async function SubmitProgram() {
+    try {
+        (0, submit_program_1.default)({
+            GITHUB_USERNAME: "codinasion",
+            GITHUB_REPONAME: "codinasion",
+            GITHUB_TOKEN: core.getInput("GITHUB_TOKEN") ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                "",
+            SUBMIT_PROGRAM_USERNAME: core.getInput("SUBMIT_PROGRAM_USERNAME") || "",
+            SUBMIT_PROGRAM_ISSUE_NUMBER: core.getInput("SUBMIT_PROGRAM_ISSUE_NUMBER") || "",
+            SUBMIT_PROGRAM_TITLE: core.getInput("SUBMIT_PROGRAM_TITLE") || "",
+            SUBMIT_PROGRAM_BODY: core.getInput("SUBMIT_PROGRAM_BODY") || "",
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgram;
+// // Test the function
+// SubmitProgram();
 
 
 /***/ }),
@@ -41991,6 +42227,10 @@ const tweet_gfi_data_1 = __importDefault(__nccwpck_require__(1141));
 const tweet_trending_repos_data_1 = __importDefault(__nccwpck_require__(3230));
 const tweet_quote_data_1 = __importDefault(__nccwpck_require__(6379));
 const tweet_meme_1 = __importDefault(__nccwpck_require__(2579));
+const submit_program_1 = __importDefault(__nccwpck_require__(4550));
+const submit_program_comment_close_1 = __importDefault(__nccwpck_require__(410));
+const auto_create_issue_1 = __importDefault(__nccwpck_require__(7444));
+const auto_track_issue_1 = __importDefault(__nccwpck_require__(4148));
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
@@ -42020,6 +42260,22 @@ async function run() {
         const TRIGGER_TWEET_MEME = core.getInput("TRIGGER_TWEET_MEME");
         if (TRIGGER_TWEET_MEME === "true") {
             await (0, tweet_meme_1.default)();
+        }
+        const TRIGGER_SUBMIT_PROGRAM = core.getInput("TRIGGER_SUBMIT_PROGRAM");
+        if (TRIGGER_SUBMIT_PROGRAM === "true") {
+            await (0, submit_program_1.default)();
+        }
+        const TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE = core.getInput("TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE");
+        if (TRIGGER_SUBMIT_PROGRAM_COMMENT_CLOSE === "true") {
+            await (0, submit_program_comment_close_1.default)();
+        }
+        const TRIGGER_AUTO_CREATE_ISSUE = core.getInput("TRIGGER_AUTO_CREATE_ISSUE");
+        if (TRIGGER_AUTO_CREATE_ISSUE === "true") {
+            await (0, auto_create_issue_1.default)();
+        }
+        const TRIGGER_AUTO_TRACK_ISSUE = core.getInput("TRIGGER_AUTO_TRACK_ISSUE");
+        if (TRIGGER_AUTO_TRACK_ISSUE === "true") {
+            await (0, auto_track_issue_1.default)();
         }
     }
     catch (error) {
@@ -42416,6 +42672,788 @@ async function FetchProgramList({ GITHUB_USERNAME, PROGRAM_REPONAME, PROGRAM_PAT
     return [];
 }
 exports["default"] = FetchProgramList;
+
+
+/***/ }),
+
+/***/ 9653:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const create_issue_1 = __importDefault(__nccwpck_require__(3500));
+async function AutoCreateIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, }) {
+    try {
+        const programDataFolderPath = "program/data";
+        if (!fs_1.default.existsSync(programDataFolderPath)) {
+            core.info(`No program data folder found at ${programDataFolderPath}`);
+            return;
+        }
+        const programDataFilePath = `${programDataFolderPath}/programs.json`;
+        if (!fs_1.default.existsSync(programDataFilePath)) {
+            core.info(`No program data file found at ${programDataFilePath}`);
+            return;
+        }
+        const languagesDataFilePath = `${programDataFolderPath}/languages.json`;
+        if (!fs_1.default.existsSync(languagesDataFilePath)) {
+            core.info(`No languages data file found at ${languagesDataFilePath}`);
+            return;
+        }
+        // Read program data
+        const programData = JSON.parse(fs_1.default.readFileSync(programDataFilePath, "utf8"));
+        // Read languages data
+        const languagesData = JSON.parse(fs_1.default.readFileSync(languagesDataFilePath, "utf8"));
+        // Filter not created programs
+        const filteredProgramData = programData.filter((program) => program.created === false);
+        core.debug(`Filtered program data: ${JSON.stringify(filteredProgramData)}`);
+        // Select a random program from filtered program data
+        const randomProgramData = filteredProgramData[Math.floor(Math.random() * filteredProgramData.length)];
+        core.debug(`Random program data: ${JSON.stringify(randomProgramData)}`);
+        // Generate Issue data
+        const ISSUE_TITLE = randomProgramData.title.trim();
+        const TRACK_ISSUE_TITLE = `Write a program to ${ISSUE_TITLE.toLowerCase()}`;
+        let ISSUE_BODY = `### Description
+
+${randomProgramData.description.trim()}
+`;
+        // Credit contributor
+        if (randomProgramData.contributor !== "harshraj8843") {
+            ISSUE_BODY += `
+<sub>Contributed by - @${randomProgramData.contributor}</sub>
+`;
+        }
+        // Add tracking issues
+        ISSUE_BODY += `
+
+<!-- Tracking Issues -->
+
+\`\`\`[tasklist]
+### Tracking Issues
+`;
+        for (const language of languagesData) {
+            const track = TRACK_ISSUE_TITLE.replace("Write a ", `Write a ${language.name} `);
+            ISSUE_BODY += `- [ ] ${track}
+`;
+        }
+        ISSUE_BODY += `\`\`\``;
+        core.debug(`Issue body: ${ISSUE_BODY}`);
+        // Create tracking issue
+        const ISSUE_NUMBER = await (0, create_issue_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_TITLE,
+            ISSUE_BODY,
+            ISSUE_LABELS: ["auto-track"],
+        });
+        // Update program data
+        const updatedProgramData = programData.map((program) => {
+            if (program.title === randomProgramData.title) {
+                return {
+                    ...program,
+                    created: true,
+                    publishedAt: new Date().toISOString(),
+                };
+            }
+            return program;
+        });
+        core.debug(`Updated program data: ${JSON.stringify(updatedProgramData)}`);
+        // Write updated program data to file
+        fs_1.default.writeFileSync(programDataFilePath, JSON.stringify(updatedProgramData, null, 2));
+        // Create README.md for respective program
+        const programReadmeFolderPath = `program/program/${ISSUE_TITLE.toLowerCase().replace(/ /g, "-")}`;
+        if (!fs_1.default.existsSync(programReadmeFolderPath)) {
+            fs_1.default.mkdirSync(programReadmeFolderPath, { recursive: true });
+        }
+        const programReadmeFilePath = `${programReadmeFolderPath}/README.md`;
+        core.debug(`Program README file path: ${programReadmeFilePath}`);
+        const programReadmeFileContent = `---
+title: ${ISSUE_TITLE}
+trackId: ${ISSUE_NUMBER}
+---
+
+## ${randomProgramData.description.trim()}
+
+---
+`;
+        core.debug(`Program README file content: ${programReadmeFileContent}`);
+        // Write program README file
+        fs_1.default.writeFileSync(programReadmeFilePath, programReadmeFileContent);
+        // Set output
+        core.setOutput("issue-number", ISSUE_NUMBER);
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = AutoCreateIssue;
+
+
+/***/ }),
+
+/***/ 7461:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const wait_1 = __nccwpck_require__(1464);
+const file_naming_1 = __importDefault(__nccwpck_require__(7837));
+const create_issue_1 = __importDefault(__nccwpck_require__(3500));
+const update_issue_1 = __importDefault(__nccwpck_require__(1417));
+async function AutoTrackIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, AUTO_TRACK_ISSUE_NUMBER, AUTO_TRACK_ISSUE_TITLE, AUTO_TRACK_ISSUE_BODY, }) {
+    try {
+        // Debug props
+        core.debug(`GITHUB_USERNAME: ${GITHUB_USERNAME}`);
+        core.debug(`GITHUB_REPONAME: ${GITHUB_REPONAME}`);
+        // core.debug(`GITHUB_TOKEN: ${GITHUB_TOKEN}`);
+        core.debug(`AUTO_TRACK_ISSUE_NUMBER: ${AUTO_TRACK_ISSUE_NUMBER}`);
+        core.debug(`AUTO_TRACK_ISSUE_TITLE: ${AUTO_TRACK_ISSUE_TITLE}`);
+        core.debug(`AUTO_TRACK_ISSUE_BODY: ${AUTO_TRACK_ISSUE_BODY}`);
+        let ISSUE_BODY = AUTO_TRACK_ISSUE_BODY;
+        const ISSUE_DESCRIPTION = ISSUE_BODY.split("<!-- Tracking Issues -->")[0];
+        core.debug(`ISSUE_DESCRIPTION: ${ISSUE_DESCRIPTION}`);
+        const TRACKING_ISSUES = ISSUE_BODY.split("<!-- Tracking Issues -->")[1];
+        core.debug(`TRACKING_ISSUES: ${TRACKING_ISSUES}`);
+        const TRACKING_ISSUES_LIST = TRACKING_ISSUES.split("\n");
+        core.debug(`TRACKING_ISSUES_LIST: ${TRACKING_ISSUES_LIST}`);
+        const TRACKING_ISSUES_JSON = [];
+        for (const TRACKING_ISSUE of TRACKING_ISSUES_LIST) {
+            if (TRACKING_ISSUE.startsWith("- [ ] ")) {
+                const TRACKING_ISSUE_SENTENCE = TRACKING_ISSUE.split("- [ ] ")[1];
+                // get language tag from sentence
+                // get words like C C++ C# Java Python GO JavaScript PHP Julia, etc
+                let LANGUAGE_TAG = TRACKING_ISSUE_SENTENCE.split("Write a ")[1];
+                LANGUAGE_TAG = LANGUAGE_TAG.split(" program ")[0];
+                // append to tracking issues json
+                TRACKING_ISSUES_JSON.push({
+                    language_tag: LANGUAGE_TAG,
+                    sentence: TRACKING_ISSUE_SENTENCE,
+                });
+            }
+        }
+        core.debug(`TRACKING_ISSUES_JSON: ${TRACKING_ISSUES_JSON}`);
+        const programDataFolderPath = "program/data";
+        if (!fs_1.default.existsSync(programDataFolderPath)) {
+            core.info(`No program data folder found at ${programDataFolderPath}`);
+            return;
+        }
+        const languagesDataFilePath = `${programDataFolderPath}/languages.json`;
+        if (!fs_1.default.existsSync(languagesDataFilePath)) {
+            core.info(`No languages data file found at ${languagesDataFilePath}`);
+            return;
+        }
+        // Read languages data
+        const languagesData = JSON.parse(fs_1.default.readFileSync(languagesDataFilePath, "utf8"));
+        for (const TRACKING_ISSUE of TRACKING_ISSUES_JSON) {
+            const FILE_NAME = TRACKING_ISSUE.sentence
+                .replace(`Write a ${TRACKING_ISSUE.language_tag} program to `, "")
+                .trim();
+            const languageData = languagesData.find((language) => language.name === TRACKING_ISSUE.language_tag.trim());
+            const FILE = (0, file_naming_1.default)(FILE_NAME, languageData);
+            core.debug(`FILE: ${FILE}`);
+            let LANGUAGE_ISSUE_BODY = ISSUE_DESCRIPTION.replace("Write a program", `Write a ${TRACKING_ISSUE.language_tag} program`).trim();
+            LANGUAGE_ISSUE_BODY += `
+<details>
+<summary>How to contribute</summary>
+
+- Fork this repository
+- Create a new branch
+- Save the solution in \`program/program/${FILE_NAME.toLowerCase().replace(/ /g, "-")}/${FILE}\`
+- Commit the changes
+- Create a pull request
+
+</details>
+`;
+            // Create issue
+            const ISSUE_NUMBER = await (0, create_issue_1.default)({
+                GITHUB_USERNAME,
+                GITHUB_REPONAME,
+                GITHUB_TOKEN,
+                ISSUE_TITLE: TRACKING_ISSUE.sentence,
+                ISSUE_BODY: LANGUAGE_ISSUE_BODY,
+                ISSUE_LABELS: [
+                    "program",
+                    TRACKING_ISSUE.language_tag,
+                    "good first issue",
+                ],
+            });
+            core.debug(`ISSUE_NUMBER: ${ISSUE_NUMBER}`);
+            // Update auto-track issue body
+            ISSUE_BODY = ISSUE_BODY.replace(`${TRACKING_ISSUE.sentence}`, `#${ISSUE_NUMBER}`);
+            // Wait for 5 seconds
+            await (0, wait_1.wait)(5000);
+        }
+        core.debug(`ISSUE_BODY: ${ISSUE_BODY}`);
+        // Update auto-track issue body
+        await (0, update_issue_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_NUMBER: AUTO_TRACK_ISSUE_NUMBER,
+            UPDATE_ISSUE_BODY: ISSUE_BODY,
+            UPDATE_ISSUE_LABELS: ["auto-track", "program"],
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = AutoTrackIssue;
+
+
+/***/ }),
+
+/***/ 7016:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function CloseIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_NUMBER, CLOSING_LABELS, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues/${ISSUE_NUMBER}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+            },
+            body: JSON.stringify({
+                state: "closed",
+                labels: CLOSING_LABELS,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to close issue: ${response.statusText} (${response.status})`);
+        }
+        const responseData = await response.json();
+        core.debug(JSON.stringify(responseData));
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CloseIssue;
+
+
+/***/ }),
+
+/***/ 7841:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function CreateIssueComment({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_NUMBER, COMMENT_BODY, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues/${ISSUE_NUMBER}/comments`, {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                body: COMMENT_BODY,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to create comment: ${response.statusText} (${response.status})`);
+        }
+        const responseData = await response.json();
+        core.debug(JSON.stringify(responseData));
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = CreateIssueComment;
+
+
+/***/ }),
+
+/***/ 3500:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function CreateIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_TITLE, ISSUE_BODY, ISSUE_LABELS, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+            },
+            body: JSON.stringify({
+                title: ISSUE_TITLE,
+                body: ISSUE_BODY,
+                labels: ISSUE_LABELS,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to create issue: ${response.statusText} (${response.status})`);
+        }
+        const responseData = (await response.json());
+        core.debug(JSON.stringify(responseData));
+        return responseData.number.toString();
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+    return "";
+}
+exports["default"] = CreateIssue;
+
+
+/***/ }),
+
+/***/ 7837:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function FileNaming(filename, languageData) {
+    if (languageData.namingConvension === "camelCase") {
+        return `${camelCase(filename)}.${languageData.fileExtension}`;
+    }
+    if (languageData.namingConvension === "kebab-case") {
+        return `${kebabCase(filename)}.${languageData.fileExtension}`;
+    }
+    if (languageData.namingConvension === "snake_case") {
+        return `${snakeCase(filename)}.${languageData.fileExtension}`;
+    }
+    if (languageData.namingConvension === "PascalCase") {
+        return `${PascalCase(filename)}.${languageData.fileExtension}`;
+    }
+    return `${filename}.${languageData.fileExtension}`;
+}
+exports["default"] = FileNaming;
+function camelCase(filename) {
+    return filename
+        .split(" ")
+        .map((word, index) => {
+        if (index === 0) {
+            return word;
+        }
+        return word[0].toUpperCase() + word.slice(1);
+    })
+        .join("");
+}
+function kebabCase(filename) {
+    return filename.toLowerCase().split(" ").join("-");
+}
+function snakeCase(filename) {
+    return filename.toLowerCase().split(" ").join("_");
+}
+function PascalCase(filename) {
+    return filename
+        .split(" ")
+        .map((word) => word[0].toUpperCase() + word.slice(1))
+        .join("");
+}
+
+
+/***/ }),
+
+/***/ 2144:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/**
+ * Purpose: Notify the user & close the issue (only after pull request is created)
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const create_issue_comment_1 = __importDefault(__nccwpck_require__(7841));
+const close_issue_1 = __importDefault(__nccwpck_require__(7016));
+async function SubmitProgramCommentClose({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, SUBMIT_PROGRAM_ISSUE_NUMBER, }) {
+    try {
+        // Create a comment on the issue
+        await (0, create_issue_comment_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            COMMENT_BODY: `Program added successfully :tada:
+
+Thanks for your contribution :hugs:`,
+        });
+        // Close the issue
+        await (0, close_issue_1.default)({
+            GITHUB_USERNAME,
+            GITHUB_REPONAME,
+            GITHUB_TOKEN,
+            ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            CLOSING_LABELS: ["submit-program", "submitted"],
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgramCommentClose;
+
+
+/***/ }),
+
+/***/ 8475:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+/**
+ * Purpose: Aceept the program from the user and add it to the list of programs
+ */
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const fs_1 = __importDefault(__nccwpck_require__(7147));
+const create_issue_comment_1 = __importDefault(__nccwpck_require__(7841));
+const close_issue_1 = __importDefault(__nccwpck_require__(7016));
+async function SubmitProgram({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, SUBMIT_PROGRAM_USERNAME, SUBMIT_PROGRAM_ISSUE_NUMBER, SUBMIT_PROGRAM_TITLE, SUBMIT_PROGRAM_BODY, }) {
+    try {
+        // Debug the inputs
+        core.debug(`Issue Author: ${SUBMIT_PROGRAM_USERNAME}`);
+        core.debug(`Issue Number: ${SUBMIT_PROGRAM_ISSUE_NUMBER}`);
+        core.debug(`Title: ${SUBMIT_PROGRAM_TITLE}`);
+        core.debug(`Body: ${SUBMIT_PROGRAM_BODY}`);
+        // Modify issue body
+        const MODIFIED_ISSUE_BODY = `Write a program to ${SUBMIT_PROGRAM_TITLE.toLowerCase()}
+
+${SUBMIT_PROGRAM_BODY.replace("### Description", "").trim()}
+    `;
+        core.debug(`Modified Body: ${MODIFIED_ISSUE_BODY}`);
+        // Create new program data
+        const newProgramData = {
+            title: SUBMIT_PROGRAM_TITLE,
+            description: MODIFIED_ISSUE_BODY,
+            contributor: SUBMIT_PROGRAM_USERNAME,
+            createdAt: new Date().toISOString(),
+            createdIssueNumber: SUBMIT_PROGRAM_ISSUE_NUMBER,
+            publishedAt: "",
+            created: false,
+        };
+        core.debug(`New Program Data: ${JSON.stringify(newProgramData)}`);
+        // Get previous program data
+        const programDataFolderPath = "program/data";
+        // Check if the folder exists
+        if (!fs_1.default.existsSync(programDataFolderPath)) {
+            // Create the folder
+            fs_1.default.mkdirSync(programDataFolderPath);
+        }
+        // Check if the file exists
+        const programDataFilePath = `${programDataFolderPath}/programs.json`;
+        if (!fs_1.default.existsSync(programDataFilePath)) {
+            // Create the file
+            fs_1.default.writeFileSync(programDataFilePath, "[]");
+        }
+        // Read the file
+        const previousProgramData = JSON.parse(fs_1.default.readFileSync(programDataFilePath, "utf8"));
+        core.debug(`Previous Program Data: ${JSON.stringify(previousProgramData)}`);
+        // Check if the program already exists
+        const programExists = previousProgramData.find((program) => program.title === SUBMIT_PROGRAM_TITLE);
+        // If the program already exists
+        if (programExists) {
+            core.debug("Program already exists !!!");
+            // Create a comment on the issue
+            await (0, create_issue_comment_1.default)({
+                GITHUB_USERNAME,
+                GITHUB_REPONAME,
+                GITHUB_TOKEN,
+                ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+                COMMENT_BODY: `Hey @${SUBMIT_PROGRAM_USERNAME}
+
+It seems that this program already been submitted.
+
+Please check the list of programs here: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPONAME}/blob/master/program/data/programs.json
+
+Thanks for your contribution :hugs:`,
+            });
+            // Close the issue
+            await (0, close_issue_1.default)({
+                GITHUB_USERNAME,
+                GITHUB_REPONAME,
+                GITHUB_TOKEN,
+                ISSUE_NUMBER: SUBMIT_PROGRAM_ISSUE_NUMBER,
+                CLOSING_LABELS: ["submit-program", "duplicate"],
+            });
+            // Set output as failure
+            core.setFailed("Program already exists !!!");
+            // Stop the execution
+            return;
+        }
+        // Add the new program data to the previous program data
+        previousProgramData.push(newProgramData);
+        // Sort the programs by title
+        previousProgramData.sort((a, b) => a.title.localeCompare(b.title));
+        core.debug(`New Program Data: ${JSON.stringify(previousProgramData)}`);
+        // Write the new program data to the file
+        fs_1.default.writeFileSync(programDataFilePath, JSON.stringify(previousProgramData, null, 2));
+        // Set output as success
+        core.setOutput("submit-success", "true");
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = SubmitProgram;
+
+
+/***/ }),
+
+/***/ 1417:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const core = __importStar(__nccwpck_require__(6108));
+const node_fetch_1 = __importDefault(__nccwpck_require__(5360));
+async function UpdateIssue({ GITHUB_USERNAME, GITHUB_REPONAME, GITHUB_TOKEN, ISSUE_NUMBER, UPDATE_ISSUE_BODY, UPDATE_ISSUE_LABELS, }) {
+    try {
+        const response = await (0, node_fetch_1.default)(`https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPONAME}/issues/${ISSUE_NUMBER}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+            },
+            body: JSON.stringify({
+                body: UPDATE_ISSUE_BODY,
+                labels: UPDATE_ISSUE_LABELS,
+            }),
+        });
+        if (!response.ok) {
+            core.setFailed(`Failed to update issue: ${response.statusText} (${response.status})`);
+        }
+        const responseData = await response.json();
+        core.debug(JSON.stringify(responseData));
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : "Unknown error occurred");
+    }
+}
+exports["default"] = UpdateIssue;
 
 
 /***/ }),

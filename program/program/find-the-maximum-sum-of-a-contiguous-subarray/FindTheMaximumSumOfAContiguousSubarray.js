@@ -1,11 +1,10 @@
-function findContigousSubArray(arr) {
-  var min = 0;
-  max = 0;
-  for (var i = 0; i < arr.length; i++) {
-    min = Math.max(min + arr[i], arr[i]);
-    max = Math.max(max, min);
+function getTheHighstSumInArr(nums) {
+  if(nums.length === 1 ) return nums[0];
+  let maxSum = Number.NEGATIVE_INFINITY;
+  let sum = 0;
+  for(let i = 0; i < nums.length; i++){
+      sum = Math.max(nums[i], nums[i] + sum)
+      maxSum = Math.max(sum, maxSum);
   }
-  return max;
+  return maxSum;
 }
-
-console.log(findContigousSubArray([-2, -3, 4, -1, -2, 1, 5, -3]));
