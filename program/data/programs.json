@@ -1548,6 +1548,15 @@
     "created": true
   },
   {
+    "title": "Implement Linear Search",
+    "description": "Write a program to implement linear search\n\nLinear search is a very simple search algorithm. In this type of search, a sequential search is made over all items one by one. Every item is checked and if a match is found then that particular item is returned, otherwise the search continues till the end of the data collection.\r\n\r\nLinear search is the simplest search algorithm. For this reason, it is often called sequential search.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure linear_search (list, value)\r\n\r\n   for each item in the list\r\n      if match item == value\r\n         return the item's location\r\n      end if\r\n   end for\r\n\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:59.464Z",
+    "createdIssueNumber": "5061",
+    "publishedAt": "",
+    "created": false
+  },
+  {
     "title": "Merge two strings",
     "description": "Write a program to merge two strings\n\n```\r\nInput  : ABC DEF\r\nOutput : ABCDEF\r\n```\n",
     "contributor": "harshraj8843",
