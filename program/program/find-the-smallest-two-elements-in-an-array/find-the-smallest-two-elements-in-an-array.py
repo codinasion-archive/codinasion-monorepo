@@ -7,7 +7,7 @@ def main():
             Asymptotic analsis
             By sorting the sequence of the elements, elements will be placed next to each other. Therefore
             1. built in function sorted guarantees a worst case running time of O(n log n)
-            2. returning tuple assignment is in constant time
+            2. return tuple assignment is in constant time O(1)
             
       """
       seq = [12, 13, 1, 10, 34]                                                # Test with various sequences
