@@ -19,3 +19,11 @@ def move_zeros_to_end(arr):
             non_zero_index += 1
 
     return arr
+
+input_string = input("Enter a list of numbers separated by commas: ")
+try:
+    user_arr = [int(num.strip()) for num in input_string.split(',')]
+except ValueError:
+    print("Invalid input. Please enter only integers separated by commas.")
+else:
+    print("Modified list:", move_zeros_to_end(user_arr))
