@@ -1,6 +1,6 @@
 {
   "name": "@codinasion/counting-sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -11,15 +11,15 @@
     "dist"
   ],
   "license": "MIT",
-  "homepage": "https://codinasion.tech",
+  "homepage": "https://codinasion.org",
   "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/Codinasion"
-    },
     {
       "type": "github",
       "url": "https://github.com/sponsors/codinasion"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Codinasion"
     },
     {
       "type": "opencollective",
@@ -68,13 +68,13 @@
     "test": "jest --config jestconfig.json --maxWorkers=50% --passWithNoTests"
   },
   "devDependencies": {
-    "@codinasion/eslint-config": "1.0.3",
-    "@codinasion/typescript-config": "1.0.2",
+    "@codinasion/eslint-config": "1.0.5",
+    "@codinasion/typescript-config": "1.0.3",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.3",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.1",
     "tsup": "^8.0.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }
