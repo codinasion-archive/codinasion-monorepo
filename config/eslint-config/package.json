@@ -1,6 +1,6 @@
 {
   "name": "@codinasion/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "publishConfig": {
     "access": "public"
   },
@@ -11,15 +11,15 @@
     "react-internal.js"
   ],
   "license": "MIT",
-  "homepage": "https://codinasion.tech",
+  "homepage": "https://codinasion.org",
   "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/Codinasion"
-    },
     {
       "type": "github",
       "url": "https://github.com/sponsors/codinasion"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Codinasion"
     },
     {
       "type": "opencollective",
@@ -45,12 +45,12 @@
     "eslint-config"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
     "@vercel/style-guide": "^5.1.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-config-turbo": "^1.10.12",
+    "eslint-config-turbo": "^1.11.2",
     "eslint-plugin-only-warn": "^1.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }

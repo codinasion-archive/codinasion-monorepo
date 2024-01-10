@@ -4,6 +4,7 @@ import React from "react";
 import GoodFirstIssueCard from "./good-first-issue-card";
 import GoodFirstIssueBrowseByLanguageComponent from "./good-first-issue-browse-by-language-component";
 import GoodFirstIssueFilterByLabelComponent from "./good-first-issue-filter-by-label-component";
+import SponsorCard from "@/components/Sponsors/sponsor-card";
 import { ScrollToTop } from "@/utils";
 import type { GoodFirstIssueType, GoodFirstIssueLabelDataType } from "@/types";
 
@@ -60,7 +61,7 @@ export default function GoodFirstIssuesComponent({
 
   return (
     <div className="flex flex-col md:flex-row sm:space-x-10">
-      <div>
+      <div className="w-full">
         <ul>
           {displayGoodFirstIssues.map((goodFirstIssue) => (
             <li key={goodFirstIssue.id} className="pb-5">
@@ -77,8 +78,10 @@ export default function GoodFirstIssuesComponent({
         ) : null}
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 min-w-[320px]">
         <GoodFirstIssueBrowseByLanguageComponent language={language} />
+
+        <SponsorCard />
 
         <GoodFirstIssueFilterByLabelComponent
           goodFirstIssueLabelsData={goodFirstIssueLabelsData}
