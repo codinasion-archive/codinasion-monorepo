@@ -12,5 +12,5 @@ function findLargestThreeElements(arr: number[]): number[] {
 
 const test_input: number[] = [10, 4, 3, 50, 23, 90];
 const test_output: number[] = findLargestThreeElements(test_input);
-console.log("Input:", arr1);
+console.log("Input:", test_input);
 console.log("Output:", test_output);
