@@ -1,5 +1,12 @@
 packages:
-  - "apps/*"
+  # include
+  - "action"
   - "assets"
-  - "github-bots/*"
-  - "packages/**/*"
+  - "bot"
+  - "config/**"
+  - "npm/**"
+  - "website"
+
+  # exclude
+  - "!**/.next/**"
+  - "!**/node_modules/**"
