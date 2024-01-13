@@ -10,4 +10,3 @@ function reverseString(str) {
 }
 
 console.log("String reverse:", reverseString(string));
-
