@@ -1,10 +1,10 @@
 {
-  "name": "codinasion",
-  "version": "1.0.6",
+  "name": "@codinasion/base64-to-string",
+  "version": "1.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "description": "A collection of useful TypeScript functions and classes",
+  "description": "Converts a base64 string to a string",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -41,7 +41,10 @@
   },
   "keywords": [
     "codinasion",
-    "typescript"
+    "string",
+    "encoding",
+    "decoding",
+    "base64"
   ],
   "tsup": {
     "treeshake": true,
