@@ -1,5 +1,17 @@
 # codinasion
 
+## 1.0.7
+
+### Patch Changes
+
+- 75abb7f: Update LICENSE
+
+## 1.0.6
+
+### Patch Changes
+
+- 703b474: Add encoding
+
 ## 1.0.5
 
 ### Patch Changes
