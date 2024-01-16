@@ -1,4 +1,5 @@
 public class SelectionSort {
+    
     public static void main(String[] args) {
         int[] sortedArray = selectionSort([8, 5, 2, 6, 9, 3, 1, 4, 0, 7]);
         printArray(sortedArray);
