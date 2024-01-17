@@ -13,6 +13,9 @@ on:
 
 jobs:
   collect-program-data:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Collect Program Data
 
     runs-on: "ubuntu-latest"
@@ -24,8 +27,8 @@ jobs:
 
       - name: Check Program Files
         run: |
-          cd program/
-          python3 scripts/rename_files.py
+          cd scripts/
+          python3 program/rename_files.py
 
       - name: Collect Program Data
         id: collect-program-data
