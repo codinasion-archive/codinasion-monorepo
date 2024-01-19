@@ -1,3 +1,5 @@
+use std::io;
+
 fn selection_sort(arr: &mut Vec<i32>) {
     let n = arr.len();
 
@@ -17,8 +19,19 @@ fn selection_sort(arr: &mut Vec<i32>) {
 }
 
 fn main() {
-    let mut numbers = vec![64, 25, 12, 22, 11];
-    
+    // Take user input for the array
+    let mut numbers = Vec::new();
+    println!("Enter numbers separated by spaces:");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+
+    for num in input.trim().split_whitespace() {
+        if let Ok(n) = num.parse::<i32>() {
+            numbers.push(n);
+        }
+    }
+
     println!("Original array: {:?}", numbers);
 
     selection_sort(&mut numbers);
