@@ -1,6 +1,6 @@
 # Function to calculate cube of a number
 calculate_cube <- function(x) {
-    return(x^3)
+  return(x^3)
 }
 
 
