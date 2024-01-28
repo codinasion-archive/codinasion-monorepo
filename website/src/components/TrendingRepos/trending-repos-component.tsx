@@ -3,6 +3,7 @@
 import React from "react";
 import TrendingRepoCard from "./trending-repo-card";
 import TrendingReposFilterByLanguageComponent from "./trending-repos-filter-by-language-component";
+import SponsorCard from "@/components/Sponsors/sponsor-card";
 import { ScrollToTop } from "@/utils";
 import type { TrendingRepoType } from "@/types";
 
@@ -35,7 +36,7 @@ export default function TrendingReposComponent({
 
   return (
     <div className="flex flex-col md:flex-row sm:space-x-10">
-      <div>
+      <div className="w-full">
         <ul>
           {displayTrendingRepos.map((repo) => (
             <li key={repo.author + repo.name} className="pb-5">
@@ -45,12 +46,14 @@ export default function TrendingReposComponent({
         </ul>
       </div>
 
-      <div className="space-y-5">
+      <div className="space-y-5 min-w-[320px]">
         <TrendingReposFilterByLanguageComponent
           trendingReposLanguagesData={trendingReposLanguagesData}
           selectedLanguage={selectedLanguage}
           onLanguageClick={handleLanguageClick}
         />
+
+        <SponsorCard />
       </div>
     </div>
   );

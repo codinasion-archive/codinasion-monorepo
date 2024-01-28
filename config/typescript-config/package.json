@@ -1,6 +1,6 @@
 {
   "name": "@codinasion/typescript-config",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "publishConfig": {
     "access": "public"
   },
@@ -11,15 +11,15 @@
     "react-library.json"
   ],
   "license": "MIT",
-  "homepage": "https://codinasion.tech",
+  "homepage": "https://codinasion.org",
   "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/Codinasion"
-    },
     {
       "type": "github",
       "url": "https://github.com/sponsors/codinasion"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Codinasion"
     },
     {
       "type": "opencollective",
