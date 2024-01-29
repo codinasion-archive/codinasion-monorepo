@@ -20,6 +20,7 @@ function ternarySearch(arr: number[], value: number): number {
         } else if (value > arr[mid2]) {
             left = mid2 + 1;
         } else {
+            // Adjust pointers based on the comparison with the target value
             left = mid1 + 1;
             right = mid2 - 1;
         }
