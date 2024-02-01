@@ -27,3 +27,4 @@ void main() {
   moveZeroes(arr2);
   print('Output for arr2: $arr2'); // Output : [1, 2, 3, 6, 0, 0, 0]
 }
+ 
