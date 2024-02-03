@@ -1,4 +1,4 @@
-let findMinMax (input: int list) =
+let FindLargestAndSmallestNumbersInAnArray (input: int list) =
     let sortedInput = List.sort input
     let smallest = sortedInput.[0]
     let largest = sortedInput.[sortedInput.Length-1]
@@ -6,4 +6,4 @@ let findMinMax (input: int list) =
     printfn "Largest Number in the array: %d" largest
 
 let input = [1; 2; 3; 9; 6; 4; 5]
-findMinMax input
+FindLargestAndSmallestNumbersInAnArray input
