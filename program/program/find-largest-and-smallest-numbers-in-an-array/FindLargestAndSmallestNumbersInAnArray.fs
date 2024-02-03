@@ -1,8 +1,9 @@
-let input = [ 1; 2; 3; 4; 5]
+let findMinMax (input: int list) =
+    let sortedInput = List.sort input
+    let smallest = sortedInput.[0]
+    let largest = sortedInput.[sortedInput.Length-1]
+    printfn "Smallest Number in the array: %d" smallest
+    printfn "Largest Number in the array: %d" largest
 
-let sort = List.sort input
-
-printf "%s" "Smallest Number in the array : "
-printfn "%d" sort.[0]
-printf "%s" "Largest Number in the array : "
-printfn "%d" sort.[sort.Length-1]
+let input = [1; 2; 3; 9; 6; 4; 5]
+findMinMax input
