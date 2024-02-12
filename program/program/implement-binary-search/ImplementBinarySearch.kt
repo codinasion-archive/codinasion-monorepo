@@ -19,7 +19,7 @@ fun binarySearch(A: IntArray, target: Int): Int {
     var high = A.size - 1
 
     while(low <= high) {
-        val mid = (low + high) / 2
+        val mid = low + (high - low) / 2
 
         if(A[mid] == target) {
             return mid;
