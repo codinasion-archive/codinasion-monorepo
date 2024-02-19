@@ -10,16 +10,17 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      NUMBER: ${{ github.event.issue.number }}
+      TITLE: ${{ github.event.issue.title }}
+      BODY: ${{ github.event.issue.body }}
+
     steps:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
 
       - name: Issue data
-        env:
-          NUMBER: ${{ github.event.issue.number }}
-          TITLE: ${{ github.event.issue.title }}
-          BODY: ${{ github.event.issue.body }}
         run: |
           echo "Issue number : $NUMBER"
           echo "Issue title  : $TITLE"
@@ -28,9 +29,9 @@ jobs:
       - name: Track Issue
         uses: ./action/
         with:
-          AUTO_TRACK_ISSUE_NUMBER: ${{ github.event.issue.number }}
-          AUTO_TRACK_ISSUE_TITLE: ${{ github.event.issue.title }}
-          AUTO_TRACK_ISSUE_BODY: ${{ github.event.issue.body }}
+          AUTO_TRACK_ISSUE_NUMBER: ${{ env.NUMBER }}
+          AUTO_TRACK_ISSUE_TITLE: ${{ env.TITLE }}
+          AUTO_TRACK_ISSUE_BODY: ${{ env.BODY }}
 
           # Trigger
           TRIGGER_AUTO_TRACK_ISSUE: true
