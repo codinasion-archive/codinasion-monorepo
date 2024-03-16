@@ -46,6 +46,9 @@ fn convert_julian_date_to_standard_date(julian_date: &str) -> String {
     let days = &julian_date[4..7];
 
     if let (Ok(year), Ok(days)) = (year.parse::<u32>(), days.parse::<u32>()) {
+        if days == 0 {
+            return "Invalid date format".to_string();
+        }
         let mut day = days;
         let mut month = 0;
         for (i, &month_days) in MONTHS.iter().enumerate() {
