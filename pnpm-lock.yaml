@@ -108,8 +108,8 @@ importers:
   bot:
     dependencies:
       probot:
-        specifier: ^13.0.0
-        version: 13.0.2
+        specifier: ^13.1.0
+        version: 13.1.0
     devDependencies:
       jest:
         specifier: ^29.7.0
@@ -13658,8 +13658,8 @@ packages:
       react-is: 18.2.0
     dev: true
 
-  /probot@13.0.2:
-    resolution: {integrity: sha512-uBXW2EqAG47X/+/RiDURdK/Hc9j8wgmsqjP1aEvS495oFAlwiHxYkc+32btd4JTSU68OKVXdbQzzUwcoKy7Osg==}
+  /probot@13.1.0:
+    resolution: {integrity: sha512-RDoD7UoS726k1rL+14kzUNy9xx6TM7h5m7E9onC8nA6lJxP0lYsbvFPdNuQm4GjPabZlIQVW/s5cMh6UMwLCbA==}
     engines: {node: '>=18'}
     hasBin: true
     dependencies:
