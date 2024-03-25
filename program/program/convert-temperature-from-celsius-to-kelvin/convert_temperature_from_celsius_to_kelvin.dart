@@ -5,11 +5,9 @@ double celsiusToKelvin(double celsius) {
 }
 
 void main() {
-
   double celsius = -40;
   double kelvin = celsiusToKelvin(celsius);
 
   print('Input (C): $celsius');
   print('Output (K): $kelvin');
-
 }
