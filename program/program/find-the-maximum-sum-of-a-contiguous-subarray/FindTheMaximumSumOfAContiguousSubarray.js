@@ -1,11 +1,9 @@
-function findContigousSubArray(arr) {
-  var min = 0;
-  max = 0;
-  for (var i = 0; i < arr.length; i++) {
-    min = Math.max(min + arr[i], arr[i]);
-    max = Math.max(max, min);
-  }
-  return max;
-}
+function getTheHighstSumInArr(arr) {
+  if (arr.length === 1) return arr[0];
 
-console.log(findContigousSubArray([-2, -3, 4, -1, -2, 1, 5, -3]));
+  const arrToWork = [...new Set(arr)]; // Remove duplicates
+  const arrToSum = arrToWork.slice(-4); // Select the last 4 elements
+  const maxSum = arrToSum.reduce((a, b) => a + b);
+
+  return maxSum;
+}
