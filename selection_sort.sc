@@ -17,9 +17,9 @@ object SelectionSort {
   }
 
   def main(args: Array[String]): Unit = {
-    val numbers = Array(5, 2, 8, 1, 3)
-    println("Unsorted array: " + numbers.mkString(", "))
+    val numbers = Array(8, 5, 2, 6, 9, 3, 1, 4, 0, 7)
+    println("Input: " + numbers.mkString(", "))
     selectionSort(numbers)
-    println("Sorted array: " + numbers.mkString(", "))
+    println("Output: " + numbers.mkString(", "))
   }
 }
