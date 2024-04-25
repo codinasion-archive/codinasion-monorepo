@@ -639,6 +639,15 @@
     "created": true
   },
   {
+    "title": "Convert standard date format to Julian date and vice-versa",
+    "description": "Write a program to convert standard date format to julian date and vice-versa\n\nA Julian date is a way of displaying a date that combines the current year with the number of days since the beginning of the year. For example, January 1, 2007 is 2007001, and December 31, 2007 is 2007365.\r\n\r\nThe first two digits of a Julian date represent the year, and the last three digits represent the number of days since the beginning of the year. For example, 21-001 represents January 1, 2021, and 22-165 represents June 14, 2022.\r\n\r\n### Example\r\n\r\n```\r\nInput  : 2023-06-10\r\nOutput : 2023160\r\n```\n    ",
+    "contributor": "magar51",
+    "createdAt": "2024-02-19T07:39:00.896Z",
+    "createdIssueNumber": "5402",
+    "publishedAt": "2024-02-19T07:41:10.631Z",
+    "created": true
+  },
+  {
     "title": "Convert string to alternatingcase",
     "description": "Write a program to convert string to alternatingcase\n\nAlternatingcase is a style of writing in which each letter is converted to its opposite case.\n\n```\nInput  : \"hello world\"\nOutput : \"hElLo WoRlD\"\n```",
     "contributor": "harshraj8843",
@@ -771,6 +780,15 @@
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
     "publishedAt": "2022-12-09T04:02:11.615Z",
+    "created": true
+  },
+  {
+    "title": "Convert temperature from Celsius to kelvin",
+    "description": "Write a program to convert temperature from celsius to kelvin\n\n```\r\nInput  ( C ) : -40\r\nOutput ( K ) : 233.15\r\n```\n    ",
+    "contributor": "magar51",
+    "createdAt": "2024-03-22T14:41:08.349Z",
+    "createdIssueNumber": "5514",
+    "publishedAt": "2024-03-22T14:43:05.388Z",
     "created": true
   },
   {
@@ -1395,6 +1413,24 @@
     "created": true
   },
   {
+    "title": "Find the largest three elements in an array",
+    "description": "Write a program to find the largest three elements in an array\n\n```txt\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90}\r\nOutput : 90, 50, 23\r\n\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90, 1, 100, 49}\r\nOutput : 100, 90, 50\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:12:34.730Z",
+    "createdIssueNumber": "5055",
+    "publishedAt": "2024-01-11T01:33:44.201Z",
+    "created": true
+  },
+  {
+    "title": "Find the largest two elements in an array",
+    "description": "Write a program to find the largest two elements in an array\n\n```text\r\nInput: arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput: The largest two elements are 34 and 13\r\n\r\nInput: arr[] = {10, 5, 10}\r\nOutput: The largest two elements are 10 and 5\r\n\r\nInput: arr[] = {10, 10, 10}\r\nOutput: The largest two elements are 10 and 10\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:01:50.469Z",
+    "createdIssueNumber": "5031",
+    "publishedAt": "2024-01-08T07:04:02.306Z",
+    "created": true
+  },
+  {
     "title": "Find the maximum sum of a contiguous subarray",
     "description": "Write a program to find the maximum sum of a contiguous subarray\n\nMaximum subarray problem is the task of finding the contiguous subarray within a one-dimensional array of numbers which has the largest sum. For example, for the sequence of values `−2, 1, −3, 4, −1, 2, 1, −5, 4;` the contiguous subarray with the largest sum is `4, −1, 2, 1,` with sum `6`.\n\n```\nInput  : [-2, -3, 4, -1, -2, 1, 5, -3]\nOutput : 7\n```",
     "contributor": "harshraj8843",
@@ -1428,6 +1464,24 @@
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
     "publishedAt": "2022-10-12T04:05:08.235Z",
+    "created": true
+  },
+  {
+    "title": "Find the smallest three elements in an array",
+    "description": "Write a program to find the smallest three elements in an array\n\n```txt\r\nInput  : arr[] = {10, 4, 3, 50, 23, 90}\r\nOutput : 3 4 10\r\n\r\nInput  : arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput : 1 1 10\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:57.909Z",
+    "createdIssueNumber": "5059",
+    "publishedAt": "2024-01-13T01:32:38.814Z",
+    "created": true
+  },
+  {
+    "title": "Find the smallest two elements in an array",
+    "description": "Write a program to find the smallest two elements in an array\n\n```txt\r\nInput  : arr[] = {12, 13, 1, 10, 34, 1}\r\nOutput : 1 1\r\n\r\nInput  : arr[] = {10, 5, 10}\r\nOutput : 5 10\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:14:24.986Z",
+    "createdIssueNumber": "5057",
+    "publishedAt": "2024-01-08T07:35:15.390Z",
     "created": true
   },
   {
@@ -1521,12 +1575,66 @@
     "created": true
   },
   {
+    "title": "Implement Binary Search",
+    "description": "Write a program to implement binary search\n\nBinary search is a fast search algorithm with run-time complexity of Ο(log n). This search algorithm works on the principle of divide and conquer. For this algorithm to work properly, the data collection should be in the sorted form.\r\n\r\nBinary search looks for a particular item by comparing the middle most item of the collection. If a match occurs, then the index of item is returned. If the middle item is greater than the item, then the item is searched in the sub-array to the left of the middle item. Otherwise, the item is searched for in the sub-array to the right of the middle item. This process continues on the sub-array as well until the size of the subarray reduces to zero.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure binary_search\r\n   A ← sorted array\r\n   n ← size of array\r\n   x ← value to be searched\r\n\r\n   Set lowerBound = 1\r\n   Set upperBound = n\r\n\r\n   while x not found\r\n      if upperBound < lowerBound\r\n         EXIT: x does not exists.\r\n   \r\n      set midPoint = lowerBound + ( upperBound - lowerBound ) / 2\r\n      \r\n      if A[midPoint] < x\r\n         set lowerBound = midPoint + 1\r\n         \r\n      if A[midPoint] > x\r\n         set upperBound = midPoint - 1 \r\n\r\n      if A[midPoint] = x \r\n         EXIT: x found at location midPoint\r\n   end while\r\n   \r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:27:02.195Z",
+    "createdIssueNumber": "5062",
+    "publishedAt": "2024-01-12T01:34:01.202Z",
+    "created": true
+  },
+  {
+    "title": "Implement Jump Search",
+    "description": "Write a program to implement jump search\n\nLike Binary Search, Jump Search is a searching algorithm for sorted arrays. The basic idea is to check fewer elements (than linear search) by jumping ahead by fixed steps or skipping some elements in place of searching all elements.\r\n\r\nFor example, suppose we have an array arr[] of size n and block (to be jumped) size m. Then we search at the indexes arr[0], arr[m], arr[2m]…..arr[km] and so on. Once we find the interval (arr[km] < x < arr[(k+1)m]), we perform a linear search operation from the index km to find the element x.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure jump_search\r\n   A ← sorted array\r\n   n ← size of array\r\n   x ← value to be searched\r\n\r\n   Set block size = √n\r\n\r\n   while A[min(block size, n)-1] < x do\r\n      prev = block size\r\n      block size = block size + √n\r\n      if prev >= n\r\n         return not found\r\n         \r\n   end while\r\n   \r\n   while A[prev] < x do\r\n      prev = prev + 1\r\n      \r\n      if prev == min(block size, n)\r\n         return not found\r\n         \r\n   end while\r\n   \r\n   if A[prev] == x\r\n      return prev\r\n      \r\n   return not found\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T08:00:37.356Z",
+    "createdIssueNumber": "5092",
+    "publishedAt": "2024-01-14T01:38:59.957Z",
+    "created": true
+  },
+  {
+    "title": "Implement Linear Search",
+    "description": "Write a program to implement linear search\n\nLinear search is a very simple search algorithm. In this type of search, a sequential search is made over all items one by one. Every item is checked and if a match is found then that particular item is returned, otherwise the search continues till the end of the data collection.\r\n\r\nLinear search is the simplest search algorithm. For this reason, it is often called sequential search.\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure linear_search (list, value)\r\n\r\n   for each item in the list\r\n      if match item == value\r\n         return the item's location\r\n      end if\r\n   end for\r\n\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:59.464Z",
+    "createdIssueNumber": "5061",
+    "publishedAt": "2024-01-15T01:36:35.456Z",
+    "created": true
+  },
+  {
+    "title": "Implement Selection Sort",
+    "description": "Write a program to implement selection sort\n\nSelection sort is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list.\r\n\r\n### Pseudocode\r\n\r\n```\r\nprocedure selection sort \r\n   list  : array of items\r\n   n     : size of list\r\n\r\n   for i = 1 to n - 1\r\n   /* set current element as minimum*/\r\n      min = i    \r\n   \r\n      /* check the element to be minimum */\r\n\r\n      for j = i+1 to n \r\n         if list[j] < list[min] then\r\n            min = j;\r\n         end if\r\n      end for\r\n\r\n      /* swap the minimum element with the current element*/\r\n      if indexMin != i  then\r\n         swap list[min] and list[i]\r\n      end if\r\n   end for\r\n    \r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nInput  : [8, 5, 2, 6, 9, 3, 1, 4, 0, 7]\r\nOutput : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T08:00:38.497Z",
+    "createdIssueNumber": "5093",
+    "publishedAt": "2024-01-16T01:33:52.628Z",
+    "created": true
+  },
+  {
+    "title": "Implement Ternary Search",
+    "description": "Write a program to implement ternary search\n\nTernary search is a divide and conquer algorithm that can be used to find an element in an array. It is similar to binary search where we divide the array into two parts but in this algorithm, we divide the given array into three parts and determine which has the key (searched element).\r\n\r\n### Pseudocode\r\n\r\n```text\r\nprocedure ternary_search\r\n   A ← sorted array\r\n   value ← value to be searched\r\n   l ← leftmost index\r\n   r ← rightmost index\r\n   \r\n   while l ≤ r do\r\n   \r\n      partition size = (r-l)/3\r\n      mid1 = l + partition_size\r\n      mid2 = r - partition_size\r\n      \r\n      if A[mid1] = value\r\n         return mid1\r\n         \r\n      if A[mid2] = value\r\n         return mid2\r\n         \r\n      if value < A[mid1]\r\n         set r = mid1 - 1\r\n         \r\n      else if value > A[mid2]\r\n         set l = mid2 + 1\r\n         \r\n      else\r\n         set l = mid1 + 1\r\n         set r = mid2 - 1\r\n         \r\n   end while\r\n   \r\n   return -1\r\nend procedure\r\n```\r\n\r\n### Example\r\n\r\n```text\r\nlist = [1,2,3,4,5]\r\nvalue = 4\r\n\r\nOutput : 3\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T08:00:37.646Z",
+    "createdIssueNumber": "5090",
+    "publishedAt": "2024-01-09T01:33:34.288Z",
+    "created": true
+  },
+  {
     "title": "Merge two strings",
     "description": "Write a program to merge two strings\n\n```\r\nInput  : ABC DEF\r\nOutput : ABCDEF\r\n```\n",
     "contributor": "harshraj8843",
     "createdAt": "2022-09-29T13:29:16.057Z",
     "createdIssueNumber": "271",
     "publishedAt": "2022-12-09T21:08:23.997Z",
+    "created": true
+  },
+  {
+    "title": "Move all zeroes to end of array",
+    "description": "Write a program to move all zeroes to end of array\n\n```txt\r\nInput  : arr[] = {1, 2, 0, 4, 3, 0, 5, 0};\r\nOutput : arr[] = {1, 2, 4, 3, 5, 0, 0, 0};\r\n\r\nInput  : arr[] = {1, 2, 0, 0, 0, 3, 6};\r\nOutput : arr[] = {1, 2, 3, 6, 0, 0, 0};\r\n```\n    ",
+    "contributor": "harshraj8843",
+    "createdAt": "2024-01-08T07:26:58.868Z",
+    "createdIssueNumber": "5060",
+    "publishedAt": "2024-01-10T01:34:14.702Z",
     "created": true
   },
   {
@@ -1761,6 +1869,15 @@
     "createdAt": "2022-10-07T18:46:27.887768Z",
     "createdIssueNumber": "0",
     "publishedAt": "2022-12-09T05:02:53.780Z",
+    "created": true
+  },
+  {
+    "title": "Reverse words in a string",
+    "description": "Write a program to reverse words in a string\n\n```\r\nInput  : \"Hello World\"\r\nOutput : \"World Hello\"\r\n```\n    ",
+    "contributor": "Parvezkhan0",
+    "createdAt": "2024-01-04T16:39:37.568Z",
+    "createdIssueNumber": "4946",
+    "publishedAt": "2024-01-05T16:54:05.023Z",
     "created": true
   },
   {

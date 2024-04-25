@@ -1,36 +1,58 @@
 {
-  "name": "codinasion",
+  "name": "codinasion-turbo-repo",
   "private": true,
   "scripts": {
     "git-fetch-prune-verbose": "git fetch --prune --verbose",
     "git-delete-merged-branches": "git branch | grep -v \"master\" | xargs git branch -D",
     "prepare": "husky install",
+    "postinstall": "manypkg check",
     "clone-submodules": "npx vercel-submodules --all",
     "lint": "turbo lint",
+    "lint:action": "pnpm lint --filter action",
+    "lint:bot": "pnpm lint --filter bot",
+    "lint:packages": "pnpm lint --filter !./action --filter !./bot",
     "dev": "dotenv -- turbo dev",
-    "build": "turbo build",
-    "build:local": "dotenv -- turbo build",
-    "build:packages": "pnpm build --filter !./apps/*",
+    "build": "dotenv -- turbo build",
+    "build:action": "turbo build --filter action",
+    "build:bot": "turbo build --filter bot",
+    "build:packages": "pnpm build --filter !./action --filter !./bot",
     "test": "turbo test",
+    "test:action": "pnpm test --filter action",
+    "test:bot": "pnpm test --filter bot",
+    "test:examples": "pnpm test --filter *-example*",
+    "test:packages": "pnpm test --filter !./npm/examples/** --filter !./action --filter !./bot",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
-    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build:local && pnpm test",
-    "all:packages": "pnpm format && turbo lint && pnpm build:packages && pnpm test",
+    "format:action": "prettier --write \"action/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:bot": "prettier --write \"bot/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:examples": "prettier --write \"npm/examples/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "format:packages": "prettier --write \"npm/packages/**/*.{js,jsx,ts,tsx,md,mdx,json,yml,yaml}\"",
+    "all": "pnpm clone-submodules && pnpm format && turbo lint && pnpm build && pnpm test",
+    "all:action": "pnpm format:action && pnpm lint:action && pnpm build:action && pnpm test:action",
+    "all:bot": "pnpm format:bot && pnpm lint:bot && pnpm build:bot && pnpm test:bot",
+    "all:examples": "pnpm format:examples && pnpm test:examples",
+    "all:packages": "pnpm format:packages && pnpm lint:packages && pnpm build:packages && pnpm test:packages",
     "version-packages": "pnpm changeset version && pnpm all:packages",
     "publish-packages": "pnpm all:packages && changeset version && changeset publish"
   },
-  "devDependencies": {
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
+  },
+  "dependencies": {
+    "@changesets/cli": "latest",
     "@codinasion/eslint-config": "workspace:*",
     "@codinasion/typescript-config": "workspace:*",
-    "@changesets/cli": "latest",
+    "@manypkg/cli": "latest",
     "dotenv-cli": "latest",
     "husky": "latest",
     "prettier": "latest",
     "prettier-plugin-tailwindcss": "latest",
     "turbo": "latest",
     "vercel-submodules": "^1.0.10"
-  },
-  "packageManager": "pnpm@8.9.0",
-  "engines": {
-    "node": ">=18"
   }
 }

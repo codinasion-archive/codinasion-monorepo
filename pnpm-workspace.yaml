@@ -1,7 +1,8 @@
 packages:
   # include
-  - "apps/*"
+  - "action"
   - "assets"
+  - "bot"
   - "config/**"
   - "npm/**"
 

@@ -1,0 +1,37 @@
+{
+  "name": "action",
+  "description": "Codinasion GitHub Actions",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "lint": "npx eslint . -c ./linters/.eslintrc.yml",
+    "build": "ncc build src/index.ts --license licenses.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "node-fetch": "2.7.0",
+    "twitter-api-v2": "^1.16.1"
+  },
+  "devDependencies": {
+    "@codinasion/language-data": "workspace:*",
+    "@types/node": "^20.11.1",
+    "@types/node-fetch": "^2.6.3",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vercel/ncc": "^0.38.1",
+    "dotenv": "16.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-github": "^4.10.2",
+    "eslint-plugin-jsonc": "^2.11.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.2.5",
+    "prettier-eslint": "^16.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

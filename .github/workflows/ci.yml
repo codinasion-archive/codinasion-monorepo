@@ -4,14 +4,28 @@ on:
   workflow_dispatch:
   push:
     branches: ["master"]
+    paths:
+      - "config/**"
+      - "npm/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
   pull_request:
     types: [opened, synchronize]
+    paths:
+      - "config/**"
+      - "npm/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
+    # run only if repo is not a fork
+    if: github.repository == 'codinasion/codinasion'
+
     name: Build and Test
+
     runs-on: ubuntu-latest
 
     # To use Turborepo Remote Caching, set the following environment variables for the job.
