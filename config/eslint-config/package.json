@@ -45,11 +45,11 @@
     "eslint-config"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
-    "@typescript-eslint/parser": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "@vercel/style-guide": "^5.1.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-config-turbo": "^1.12.4",
+    "eslint-config-turbo": "^1.13.3",
     "eslint-plugin-only-warn": "^1.1.0",
     "typescript": "^5.3.3"
   }
