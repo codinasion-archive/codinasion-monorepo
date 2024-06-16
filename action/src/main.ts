@@ -9,6 +9,8 @@ import SubmitProgram from './action/submit-program'
 import SubmitProgramCommentClose from './action/submit-program comment-close'
 import AutoCreateIssue from './action/auto-create-issue'
 import AutoTrackIssue from './action/auto-track-issue'
+import CollectBlogData from './action/collect-blog-data'
+import CollectToolsData from './action/collect-tools-data'
 
 /**
  * The main function for the action.
@@ -82,6 +84,20 @@ export async function run(): Promise<void> {
     )
     if (TRIGGER_AUTO_TRACK_ISSUE === 'true') {
       await AutoTrackIssue()
+    }
+
+    const TRIGGER_COLLECT_BLOG_DATA: string = core.getInput(
+      'TRIGGER_COLLECT_BLOG_DATA'
+    )
+    if (TRIGGER_COLLECT_BLOG_DATA === 'true') {
+      await CollectBlogData()
+    }
+
+    const TRIGGER_COLLECT_TOOLS_DATA: string = core.getInput(
+      'TRIGGER_COLLECT_TOOLS_DATA'
+    )
+    if (TRIGGER_COLLECT_TOOLS_DATA === 'true') {
+      await CollectToolsData()
     }
   } catch (error) {
     // Fail the workflow run if an error occurs

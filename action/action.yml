@@ -58,6 +58,16 @@ inputs:
     required: true
     default: 'false'
 
+  TRIGGER_COLLECT_TOOLS_DATA:
+    description: 'Trigger collect tools data'
+    required: true
+    default: 'false'
+
+  TRIGGER_COLLECT_BLOG_DATA:
+    description: 'Trigger collect blog data'
+    required: true
+    default: 'false'
+
   TWITTER_APP_KEY:
     description: 'twitter app key'
     required: true

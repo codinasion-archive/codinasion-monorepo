@@ -48628,7 +48628,392 @@ async function auto_track_issue_AutoTrackIssue() {
 // // Test the function
 // AutoTrackIssue();
 
+;// CONCATENATED MODULE: ./src/blog/fetch-blog-list.ts
+
+
+async function fetchBlogList({ GITHUB_USERNAME, BLOG_REPONAME, BLOG_PATH, GITHUB_TOKEN, TEST, BLOG_LIST, FETCH_FOLDER }) {
+    const queryPath = FETCH_FOLDER;
+    const query = `{
+      repository(owner: "${GITHUB_USERNAME}", name: "${BLOG_REPONAME}") {
+        object(expression: "HEAD:${queryPath}") {
+          ... on Tree {
+            entries {
+              name
+              path
+              type
+              object {
+                ... on Blob {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+    }`;
+    const response = await fetch('https://api.github.com/graphql', {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ query })
+    });
+    if (!response.ok) {
+        throw new Error(`Failed to fetch blog list: ${response.statusText}`);
+    }
+    const responseData = await response.json();
+    const entries = responseData.data.repository.object.entries;
+    for (const entry of entries) {
+        if (entry.type === 'blob') {
+            if (!BLOG_LIST.find(blog => blog.filename === entry.name)) {
+                BLOG_LIST.push({
+                    filename: `${FETCH_FOLDER}/${entry.name}`,
+                    text: entry.object.text
+                });
+                if (TEST === 'true') {
+                    break;
+                }
+            }
+        }
+        else if (entry.type === 'tree') {
+            if (TEST === 'true' && BLOG_LIST.length > 0) {
+                break;
+            }
+            core.debug(`Fetching blog list for ${entry.path}...`);
+            await fetchBlogList({
+                GITHUB_USERNAME,
+                BLOG_REPONAME,
+                BLOG_PATH,
+                GITHUB_TOKEN,
+                TEST,
+                BLOG_LIST,
+                FETCH_FOLDER: entry.path
+            });
+        }
+    }
+    return BLOG_LIST;
+}
+async function FetchBlogList({ GITHUB_USERNAME, BLOG_REPONAME, BLOG_PATH, GITHUB_TOKEN, TEST }) {
+    try {
+        const BLOG_LIST = [];
+        // Fetch blog list from Github GraphQL API
+        core.debug(`Fetching blog list for ${BLOG_PATH}...`);
+        const blogList = await fetchBlogList({
+            GITHUB_USERNAME,
+            BLOG_REPONAME,
+            BLOG_PATH,
+            GITHUB_TOKEN,
+            TEST,
+            BLOG_LIST,
+            FETCH_FOLDER: BLOG_PATH
+        });
+        core.debug(`Blog list fetched: ${blogList.length}`);
+        return blogList;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+    return [];
+}
+
+;// CONCATENATED MODULE: ./src/blog/fetch-blog-data.ts
+
+
+
+async function FetchBlogData({ GITHUB_USERNAME, BLOG_REPONAME, BLOG_PATH, GITHUB_TOKEN, TEST }) {
+    try {
+        // Fetch blog list from Github GraphQL API
+        const blogList = await FetchBlogList({
+            GITHUB_USERNAME,
+            BLOG_REPONAME,
+            BLOG_PATH,
+            GITHUB_TOKEN,
+            TEST
+        });
+        const blogDataList = [];
+        for (const blog of blogList) {
+            const matterResult = gray_matter_default()(blog.text);
+            blogDataList.push({
+                slug: blog.filename.replace('.md', '').replace('content/blog/', ''),
+                image: matterResult.data.image ? matterResult.data.image : undefined,
+                title: matterResult.data.title,
+                description: matterResult.data.description,
+                tags: matterResult.data.tags,
+                date: new Date(matterResult.data.date),
+                markdown: matterResult.content
+            });
+            if (TEST === 'true') {
+                break;
+            }
+        }
+        core.debug(`Total ${blogDataList.length} blogs fetched`);
+        // Sort blog data list by date
+        blogDataList.sort((a, b) => {
+            if (a.date > b.date) {
+                return -1;
+            }
+            if (a.date < b.date) {
+                return 1;
+            }
+            return 0;
+        });
+        return blogDataList;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+    return [];
+}
+
+;// CONCATENATED MODULE: ./src/blog/collect-blog-data.ts
+
+
+
+async function CollectBlogData({ GITHUB_USERNAME, BLOG_REPONAME, BLOG_PATH, BLOG_OUTPUT_PATH, GITHUB_TOKEN, TEST }) {
+    try {
+        // Fetch blog data from Github API
+        const blogData = await FetchBlogData({
+            GITHUB_USERNAME,
+            BLOG_REPONAME,
+            BLOG_PATH,
+            GITHUB_TOKEN,
+            TEST
+        });
+        // Create blog data folder
+        const BLOG_FOLDER = BLOG_OUTPUT_PATH;
+        await external_fs_default().promises.mkdir(BLOG_FOLDER, { recursive: true });
+        const blogList = [];
+        const tagsList = [];
+        const tagsBlogList = [];
+        for (const blog of blogData) {
+            const blogListData = {
+                slug: blog.slug,
+                image: blog.image,
+                title: blog.title,
+                description: blog.description,
+                tags: blog.tags,
+                date: blog.date
+            };
+            blogList.push(blogListData);
+            // Write blog data to file
+            const blogSlug = blog.slug.replace(BLOG_PATH, '');
+            if (blogSlug.includes('/')) {
+                // create folder
+                const blogSlugFolder = blogSlug.split('/').slice(0, -1).join('/');
+                await external_fs_default().promises.mkdir(`${BLOG_FOLDER}/${blogSlugFolder}`, {
+                    recursive: true
+                });
+            }
+            core.debug(`Writing blog data to file...`);
+            await external_fs_default().promises.writeFile(`${BLOG_FOLDER}/${blogSlug.toLowerCase()}.json`, JSON.stringify(blog));
+            // Collect tags list
+            for (const tag of blog.tags) {
+                if (!tagsList.includes(tag)) {
+                    tagsList.push(tag);
+                }
+            }
+            // Collect tags blog list
+            for (const tag of blog.tags) {
+                const tagBlogList = tagsBlogList.find((item) => item.tag === tag);
+                if (tagBlogList) {
+                    tagBlogList.blogs.push(blogListData);
+                }
+                else {
+                    tagsBlogList.push({
+                        tag,
+                        blogs: [blogListData]
+                    });
+                }
+            }
+            // Write blog list to file
+            core.debug(`Writing blog list to file...`);
+            await external_fs_default().promises.writeFile(`${BLOG_FOLDER}/blog.json`, JSON.stringify(blogList));
+            // Write tags list to file
+            core.debug(`Writing tags list to file...`);
+            await external_fs_default().promises.writeFile(`${BLOG_FOLDER}/tags.json`, JSON.stringify(tagsList));
+            // Create tags folder in blog data folder
+            const TAGS_FOLDER = `${BLOG_FOLDER}/tags`;
+            await external_fs_default().promises.mkdir(TAGS_FOLDER, { recursive: true });
+            // Write tags blog list to file
+            core.debug(`Writing tags blog list to file...`);
+            for (const tagData of tagsBlogList) {
+                // Write tag blog list to file
+                await external_fs_default().promises.writeFile(`${TAGS_FOLDER}/${tagData.tag.replace(/ /g, '-').toLowerCase()}.json`, JSON.stringify(tagData.blogs));
+            }
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+}
+
+;// CONCATENATED MODULE: ./src/action/collect-blog-data.ts
+
+
+
+main_default().config();
+async function collect_blog_data_CollectBlogData() {
+    try {
+        CollectBlogData({
+            GITHUB_USERNAME: 'codinasion',
+            BLOG_REPONAME: 'codinasion-private',
+            BLOG_PATH: 'content/blog/',
+            BLOG_OUTPUT_PATH: 'blog-data',
+            GITHUB_TOKEN: core.getInput('GITHUB_TOKEN') ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                '',
+            TEST: core.getInput('TEST') || 'true'
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+}
+// // Test the function
+// CollectBlogData();
+
+;// CONCATENATED MODULE: ./src/tools/fetch-tools-list.ts
+
+
+async function FetchToolsList({ GITHUB_USERNAME, TOOLS_REPONAME, TOOLS_PATH, GITHUB_TOKEN }) {
+    try {
+        // Fetch tools list from Github GraphQL API
+        core.debug(`Fetching tools list...`);
+        const query = `{
+      repository(owner: "${GITHUB_USERNAME}", name: "${TOOLS_REPONAME}") {
+        object(expression: "HEAD:${TOOLS_PATH}") {
+          ... on Tree {
+            entries {
+              name
+              object {
+                ... on Blob {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+    }`;
+        const response = await fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ query })
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to fetch tools list: ${response.statusText}`);
+        }
+        const responseData = await response.json();
+        const entries = responseData.data.repository.object.entries;
+        const toolsList = [];
+        for (const entry of entries) {
+            toolsList.push({
+                filename: entry.name,
+                text: entry.object.text
+            });
+        }
+        core.debug(`Total ${toolsList.length} tools fetched`);
+        return toolsList;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+    return [];
+}
+
+;// CONCATENATED MODULE: ./src/tools/fetch-tools-data.ts
+
+
+
+async function FetchToolsData({ GITHUB_USERNAME, TOOLS_REPONAME, TOOLS_PATH, GITHUB_TOKEN, TEST }) {
+    try {
+        // Fetch tools list from Github GraphQL API
+        const toolsList = await FetchToolsList({
+            GITHUB_USERNAME,
+            TOOLS_REPONAME,
+            TOOLS_PATH,
+            GITHUB_TOKEN
+        });
+        const toolsDataList = [];
+        for (const tool of toolsList) {
+            const matterResult = gray_matter_default()(tool.text);
+            const toolData = {
+                slug: matterResult.data.slug,
+                markdown: matterResult.content
+            };
+            toolsDataList.push(toolData);
+            if (TEST === 'true') {
+                break;
+            }
+        }
+        core.debug(`Total ${toolsDataList.length} tools fetched`);
+        return toolsDataList;
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+    return [];
+}
+
+;// CONCATENATED MODULE: ./src/tools/collect-tools-data.ts
+
+
+
+async function CollectToolsData({ GITHUB_USERNAME, TOOLS_REPONAME, TOOLS_PATH, TOOLS_OUTPUT_PATH, GITHUB_TOKEN, TEST }) {
+    try {
+        // Fetch tools data from Github API
+        const toolsData = await FetchToolsData({
+            GITHUB_USERNAME,
+            TOOLS_REPONAME,
+            TOOLS_PATH,
+            GITHUB_TOKEN,
+            TEST
+        });
+        // Create tools data folder
+        const TOOLS_FOLDER = TOOLS_OUTPUT_PATH;
+        await external_fs_default().promises.mkdir(TOOLS_FOLDER, { recursive: true });
+        for (const tool of toolsData) {
+            // Write tools data to file
+            await external_fs_default().promises.writeFile(`${TOOLS_FOLDER}/${tool.slug}.json`, JSON.stringify(tool));
+        }
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+}
+
+;// CONCATENATED MODULE: ./src/action/collect-tools-data.ts
+
+
+
+main_default().config();
+async function collect_tools_data_CollectToolsData() {
+    try {
+        CollectToolsData({
+            GITHUB_USERNAME: 'codinasion',
+            TOOLS_REPONAME: 'codinasion-private',
+            TOOLS_PATH: 'content/tools/',
+            TOOLS_OUTPUT_PATH: 'tools-data',
+            GITHUB_TOKEN: core.getInput('GITHUB_TOKEN') ||
+                process.env.CODINASION_GITHUB_TOKEN ||
+                '',
+            TEST: core.getInput('TEST') || 'true'
+        });
+    }
+    catch (error) {
+        core.setFailed(error instanceof Error ? error.message : 'Unknown error occurred');
+    }
+}
+// // Test the function
+// CollectToolsData();
+
 ;// CONCATENATED MODULE: ./src/main.ts
+
+
 
 
 
@@ -48685,6 +49070,14 @@ async function run() {
         const TRIGGER_AUTO_TRACK_ISSUE = core.getInput('TRIGGER_AUTO_TRACK_ISSUE');
         if (TRIGGER_AUTO_TRACK_ISSUE === 'true') {
             await auto_track_issue_AutoTrackIssue();
+        }
+        const TRIGGER_COLLECT_BLOG_DATA = core.getInput('TRIGGER_COLLECT_BLOG_DATA');
+        if (TRIGGER_COLLECT_BLOG_DATA === 'true') {
+            await collect_blog_data_CollectBlogData();
+        }
+        const TRIGGER_COLLECT_TOOLS_DATA = core.getInput('TRIGGER_COLLECT_TOOLS_DATA');
+        if (TRIGGER_COLLECT_TOOLS_DATA === 'true') {
+            await collect_tools_data_CollectToolsData();
         }
     }
     catch (error) {
