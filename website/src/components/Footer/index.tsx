@@ -34,18 +34,6 @@ export default function FooterComponent() {
                   size={5}
                   tooltip_text="GitHub Sponsors"
                 />
-                <Icon
-                  kind="patreon"
-                  href={SiteMetadata.patreon_url}
-                  size={5}
-                  tooltip_text="Patreon"
-                />
-                <Icon
-                  kind="opencollective"
-                  href={SiteMetadata.open_collective_url}
-                  size={5}
-                  tooltip_text="Open Collective"
-                />
               </div>
             </div>
           </div>
@@ -83,7 +71,6 @@ export default function FooterComponent() {
             <Icon kind="mail" href={`mailto:${SiteMetadata.email}`} size={5} />
             <Icon kind="github" href={SiteMetadata.github_url} size={5} />
             <Icon kind="twitter" href={SiteMetadata.twitter_url} size={5} />
-            <Icon kind="youtube" href={SiteMetadata.youtube_url} size={5} />
           </div>
         </div>
       </div>

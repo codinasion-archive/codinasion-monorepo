@@ -39,6 +39,7 @@ export default function CodeBlock({ children }: Props) {
     makeblock();
 
     return () => makeblock();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -55,7 +56,6 @@ export default function CodeBlock({ children }: Props) {
               // disabled={value === index}
             >
               {
-                // @ts-expect-error - object is possibly undefined
                 GetLanguageData({
                   prismTag: tab,
                 })[0].name

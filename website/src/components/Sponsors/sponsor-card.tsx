@@ -34,18 +34,6 @@ export default function SponsorCard(): JSX.Element {
             size={5}
             tooltip_text="GitHub Sponsors"
           />
-          <Icon
-            kind="patreon"
-            href={SiteMetadata.patreon_url}
-            size={5}
-            tooltip_text="Patreon"
-          />
-          <Icon
-            kind="opencollective"
-            href={SiteMetadata.open_collective_url}
-            size={5}
-            tooltip_text="Open Collective"
-          />
         </div>
       </div>
     </div>

@@ -23,8 +23,9 @@ export default function MarkdownPreview({ children }: ReactMarkdownPropsType) {
         components={MdxComponents}
         rehypePlugins={[rehypeRaw, rehypeKatex]}
         remarkPlugins={[remarkGfm, remarkMath]}
-        children={children}
-      />
+      >
+        {children}
+      </ReactMarkdown>
     </>
   );
 }

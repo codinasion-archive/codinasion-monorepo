@@ -30,7 +30,9 @@ export default function BlogCard({ blog }: Props) {
           <p>{blog.description.slice(0, 110)}...</p>
           <div className="card-actions mt-1">
             {blog.tags.map((tag) => (
-              <div className="badge badge-outline">{tag}</div>
+              <div key={tag} className="badge badge-outline">
+                {tag}
+              </div>
             ))}
           </div>
         </div>

@@ -28,6 +28,7 @@ export default function ContributorsSection({
       const shuffledContributors = contributors.sort(() => 0.5 - Math.random());
       setDisplayedContributors(shuffledContributors);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
@@ -38,6 +39,7 @@ export default function ContributorsSection({
       setDisplayedContributors(contributors);
       setShowLoadMore(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadMore = () => {
@@ -71,7 +73,7 @@ export default function ContributorsSection({
           <div className="flex max-w-5xl flex-col gap-3 px-4 lg:px-8">
             <div className="flex flex-wrap items-center justify-center gap-3">
               {displayedContributors.map((contributor) => (
-                <Tooltip content={contributor}>
+                <Tooltip content={contributor} key={contributor}>
                   <Link
                     href={`https://github.com/${contributor}`}
                     rel="nofollow noreferrer noopener"

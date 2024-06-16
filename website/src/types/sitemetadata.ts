@@ -6,7 +6,6 @@ interface SiteMetadataType {
 
   github_url: string;
   twitter_url: string;
-  youtube_url: string;
 
   twitter_username: string;
   twitter_userid: string;
@@ -14,8 +13,6 @@ interface SiteMetadataType {
   email: string;
 
   github_sponsor_url: string;
-  open_collective_url: string;
-  patreon_url: string;
 }
 
 export type { SiteMetadataType };
