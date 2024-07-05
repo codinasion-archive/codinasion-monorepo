@@ -3,8 +3,8 @@ packages:
   - "action"
   - "assets"
   - "bot"
-  - "config/**"
-  - "npm/**"
+  - "packages/**"
+  - "website"
 
   # exclude
   - "!**/.next/**"
